@@ -194,6 +194,8 @@ Para verificar el tipo de datos de ciertos datos/variables, usamos la función *
 
 Primero abra la carpeta de su proyecto, Python_workshop_2023. Si no tiene esta carpeta, cree un nombre de carpeta llamada Python_workshop_2023 o clone este repositorio. Dentro de esta carpeta, crea un archivo llamado holaMundo.py. Dentro de este archivo vamos a desarrollar nuestro primer programa en python.
 
+Imprimir a la consola en Python. Para imprimir cadenas en la consola o hacer eco de algunos datos en la salida de la consola, use la función `print()` incorporada de Python. La función `print()` puede tomar diferentes tipos de valores como argumento(s), como cadena, entero, flotante, etc., u objeto de un tipo de clase.
+
 ```python
 print('Hola mundo')
 ```
