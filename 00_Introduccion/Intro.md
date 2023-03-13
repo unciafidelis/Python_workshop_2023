@@ -12,6 +12,18 @@ Es un lenguaje de programación muy cercano al lenguaje humano y por eso es fác
 
 Python es utilizado por varias industrias y empresas (incluido Google). Se ha utilizado para desarrollar aplicaciones web, aplicaciones de escritorio, administración de sistemas y bibliotecas de machine learning. Python es un lenguaje muy aceptado en la comunidad de ciencia de datos y machine learning.
 
+Existe una tendencia clara y seguramente el interés en Python vaya a seguir creciendo en los próximos años. Estos son los motivos por lo que ha crecido tanto y lo seguirá haciendo:
+
+Se trata de un lenguaje fácil de aprender, con una sintaxis muy sencilla que se asemeja bastante al pseudocódigo. En otras palabras, poco código hace mucho.
+
+Su uso no está ligado a un sector concreto. Por ejemplo el lenguaje R es útil para análisis de datos, pero no puede ser usado para desarrollo web. Python vale para todo.
+
+Tiene una comunidad enorme, además de gran cantidad de librerías para hacer prácticamente cualquier cosa, literalmente.
+
+Es un lenguaje multiplataforma, por lo que el mismo código es compatible en cualquier plataforma (Windows, macOS, Linux) sin hacer nada.
+
+Por lo general se puede hacer desarrollos en Python más rápidamente que en otros lenguajes, acortando la duración de los proyectos.
+
 ##Preparación del entorno de programación
 
 ### Instalación de Python
