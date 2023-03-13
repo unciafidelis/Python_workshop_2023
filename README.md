@@ -4,3 +4,13 @@ Este curso pretende mostrar los aspectos básicos de la programación en python,
 
 >Un buen desarrollador de software trabaja con disciplina y constancia desde el primer día. -Omar Bradley
 
+Alumnos:
+
+Alicia - @arosales73
+Paloma - @paloma-torres
+Alberto - @BetoMarquezzz
+Rodrigo - @banolu
+Joel - @leoboyean
+Victor - @victorbernal
+Maria Inés - @MarinesRivas
+Ingrid - @IngridGaGo
