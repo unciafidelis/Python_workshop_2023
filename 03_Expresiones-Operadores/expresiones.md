@@ -1,6 +1,6 @@
-#Expresiones y Operadores
+# Expresiones y Operadores
 
-##Expresiones.
+## Expresiones.
 
 Las expresiones son combinaciones de constantes, variables, símbolos de operación, paréntesis y nombres de funciones especiales.
 
