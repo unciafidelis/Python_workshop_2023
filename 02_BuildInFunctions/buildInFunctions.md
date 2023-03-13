@@ -1,8 +1,8 @@
-#Build In Functions
+# Build In Functions
 
 En esta lección hablaremos sobre las funciones con las que cuenta Python, comunmente llamadas palabras reservadas, las Build In Functions hacen que todo procesamiento y funcionalidad dentro de un programa se compile y se ejecute.
 
-###abs(x)
+### abs(x)
 Devuelve el valor absoluto de un número `x`. El argumento puede ser un número entero, un número de punto flotante o un objeto que implemente `__abs__()`. Si el argumento es un número complejo, se devuelve su magnitud.
 
 ej.
@@ -13,7 +13,7 @@ print(abs(10.2))
 print(abs(10j))
 ```
 
-###all(iterable)
+### all(iterable)
 Retorna `True` si todos los elementos del iterable son verdaderos (o si el iterable está vacío). Equivalente a:
 
 ```python
@@ -24,7 +24,7 @@ def all(iterable):
     return True
 ```
 
-###any(iterable)
+### any(iterable)
 Retorna `True` si algún elemento del iterable es verdadero. Si el iterable está vacío, devuelve `False`. Equivalente a:
 
 ```python
@@ -35,7 +35,7 @@ def any(iterable):
     return False
 ```
 
-###ascii(object)
+### ascii(object)
 Como `repr()`, devuelve una cadena que contiene una representación imprimible de un objeto, pero escapa los caracteres que no son ASCII en la cadena devuelta por `repr()` usando escapes \x, \u o \U.
 ej.
 
@@ -43,7 +43,7 @@ ej.
 print(ascii(x))
 ```
 
-###bin(x)
+### bin(x)
 Convierta un número entero en una cadena binaria con el prefijo "0b". El resultado es una expresión de Python válida. Si x no es un objeto int de Python, debe definir un método `__index__()` que devuelva un número entero. 
 ej.
 
@@ -61,20 +61,20 @@ f'{14:#b}', f'{14:b}'
 
 Consulte también `format()` para obtener más información.
 
-###class bool([x])
+### class bool([x])
 
 Devuelve un valor booleano, es decir, uno de `True` o `False`. `x` se convierte usando el procedimiento de prueba de verdad estándar. Si `x` es `False` o se omite, devuelve `False`; de lo contrario, devuelve `True`. La clase bool es una subclase de int (consulte Tipos numéricos: int, float, complex). No se puede subclasificar más. Sus únicas instancias son `False` y `True` (consulte Valores booleanos).
 
 Cambiado en la versión 3.7: `x` ahora es un parámetro solo posicional.
 
-###breakpoint(*args, **kws)
+### breakpoint(*args, **kws)
 Esta función lo lleva al depurador en el sitio de la llamada. Específicamente, llama a `sys.breakpointhook()`, pasando `args` y `kws` directamente. De forma predeterminada, `sys.breakpointhook()` llama a `pdb.set_trace()` sin esperar argumentos. En este caso, es puramente una función de conveniencia, por lo que no tiene que importar `pdb` explícitamente ni escribir tanto código para ingresar al depurador. Sin embargo, `sys.breakpointhook()` se puede configurar para alguna otra función y `breakpoint()` la llamará automáticamente, lo que le permitirá acceder al depurador de su elección.
 
 Genera un evento de auditoría builtins.breakpoint con argumento breakpointhook.
 
 Nuevo en la versión 3.7.
 
-###class bytearray([source[, encoding[, errors]]])
+### class bytearray([source[, encoding[, errors]]])
 Devuelve una nueva matriz de bytes. La clase `bytearray` es una secuencia mutable de enteros en el rango `0 <= x < 256`. Tiene la mayoría de los métodos habituales de secuencias mutables, descritos en Tipos de secuencias mutables, así como la mayoría de los métodos que tiene el tipo bytes, consulte Bytes y Operaciones bytearray.
 
 El parámetro de fuente opcional se puede usar para inicializar la matriz de diferentes maneras:
@@ -100,12 +100,12 @@ Los objetos de bytes también se pueden crear con literales, consulte Literales 
 
 Consulte también Tipos de secuencias binarias: `bytes`, `bytearray`, `memoryview`, `Bytes Objects y Bytes` and `Bytearray Operations`.
 
-###callable(object)
+### callable(object)
 Devuelva `True` si el argumento del objeto parece invocable, `False` si no. Si esto devuelve `True`, aún es posible que una llamada falle, pero si es `False`, el objeto que llama nunca tendrá éxito. Tenga en cuenta que las clases son invocables (llamar a una clase devuelve una nueva instancia); las instancias son invocables si su clase tiene un método `__call__()`.
 
 Nuevo en la versión 3.2: esta función se eliminó por primera vez en Python 3.0 y luego se recuperó en Python 3.2.
 
-###chr(i)
+### chr(i)
 Devuelve la cadena que representa un carácter cuyo punto de código Unicode es el entero `i`. Por ejemplo, `chr(97)` devuelve la cadena 'a', mientras que `chr(8364)` devuelve la cadena '€'. Este es el inverso de `ord()`.
 
 El rango válido para el argumento es de 0 a 1 114 111 (0x10FFFF en base 16). `ValueError` se generará si i está fuera de ese rango.
@@ -115,7 +115,7 @@ print(chr(97))
 print(chr(8364))
 ```
 
-###@classmethod
+### @classmethod
 Transforma un método en un método de clase.
 
 Un método de clase recibe la clase como primer argumento implícito, al igual que un método de instancia recibe la instancia. Para declarar un método de clase, usa este modismo:
@@ -134,7 +134,7 @@ Los métodos de clase son diferentes a los métodos estáticos de C++ o Java. Si
 
 Cambiado en la versión 3.9: los métodos de clase ahora pueden envolver otros descriptores como `property()`.
 
-###compile(source, filename, mode, flags=0, dont_inherit=False, optimize=-1)
+### compile(source, filename, mode, flags=0, dont_inherit=False, optimize=-1)
 Compila la fuente en un código o un objeto `AST`. Los objetos de código se pueden ejecutar mediante `exec()` o `eval()`. fuente puede ser una cadena normal, una cadena de bytes o un objeto `AST`. Consulte la documentación del módulo ast para obtener información sobre cómo trabajar con objetos `AST`.
 
 El argumento del nombre de archivo debe proporcionar el archivo del que se leyó el código; pasar algún valor reconocible si no se leyó de un archivo (comúnmente se usa `'<string>'`).
@@ -162,7 +162,7 @@ Modificado en la versión 3.5: Anteriormente, se generaba `TypeError` cuando se 
 
 Nuevo en la versión 3.8: `ast.PyCF_ALLOW_TOP_LEVEL_AWAIT` ahora se puede pasar en `flags` para habilitar el soporte para `top-level await`, `async for`, y `async with`.
 
-###class complex([real[, imag]])
+### class complex([real[, imag]])
 Devuelve un número complejo con el valor `real + imag*1j` o convierte una cadena o número en un número complejo. Si el primer parámetro es una cadena, se interpretará como un número complejo y la función debe llamarse sin un segundo parámetro. El segundo parámetro nunca puede ser una cadena. Cada argumento puede ser de cualquier tipo numérico (incluido el complejo). Si se omite imag, el valor predeterminado es cero y el constructor sirve como una conversión numérica como `int` y `float`. Si se omiten ambos argumentos, devuelve `0j`.
 
 Para un Python general `object x`, `complex(x)` delegados a `x.__complex__()`. `If __complex__()` no está definido entonces vuelve a `__float__()`. `If __float__()` no está definido entonces vuelve a `__index__()`.
@@ -174,10 +174,10 @@ El tipo `complex` se describe en Tipos numéricos — `int`, `float`, `complex`.
 Modificado en la versión 3.6: se permite agrupar dígitos con guiones bajos como en los literales de código.
 Cambiado en la versión 3.8: recurre a `__index__()` si `__complex__()` y `__float__()` no están definidos.
 
-##delattr(object, name)
+### delattr(object, name)
 Este es un pariente de `setattr()`. Los argumentos son un objeto y una cadena. La cadena debe ser el nombre de uno de los atributos del objeto. La función elimina el atributo nombrado, siempre que el objeto lo permita. Por ejemplo, `delattr(x, 'foobar')` es equivalente a del `x.foobar`.
 
-###class dict(**kwarg)
+### class dict(**kwarg)
 
 `class dict(mapping, **kwarg)`
 `class dict(iterable, **kwarg)`
@@ -186,7 +186,7 @@ Crear un nuevo diccionario. El objeto `dict` es la clase de diccionario. Consult
 
 Para otros contenedores, consulte las clases integradas de `list`, `set` y `tuple`, así como el módulo de colecciones.
 
-###dir([object])
+### dir([object])
 Sin argumentos, devuelve la lista de nombres en el ámbito local actual. Con un argumento, intente devolver una lista de atributos válidos para ese objeto.
 
 Si el objeto tiene un método llamado `__dir__()`, se llamará a este método y debe devolver la lista de atributos. Esto permite que los objetos que implementan una función personalizada `__getattr__()` o `__getattribute__()` personalicen la forma en que `dir()` informa sus atributos.
@@ -221,10 +221,10 @@ dir(s)
 
 **Nota**: Debido a que `dir()` se proporciona principalmente como una conveniencia para su uso en un aviso interactivo, intenta proporcionar un conjunto interesante de nombres más que un conjunto de nombres definidos de manera rigurosa o consistente, y su comportamiento detallado puede cambiar entre versiones. Por ejemplo, los atributos de la metaclase no están en la lista de resultados cuando el argumento es una clase.
 
-###divmod(a, b)
+### divmod(a, b)
 Toma dos números (no complejos) como argumentos y devuelve un par de números que consisten en su cociente y resto al usar la división de enteros. Con tipos de operandos mixtos, se aplican las reglas para los operadores aritméticos binarios. Para números enteros, el resultado es el mismo que (`a // b, a % b`). Para números de punto flotante, el resultado es (`q, a % b`), donde q suele ser math.floor (a / b), pero puede ser 1 menos que eso. En cualquier caso q * b + a % b está muy cerca de a, si a % b es distinto de cero tiene el mismo signo que b, y 0 <= abs(a % b) < abs(b).
 
-###enumerate(iterable, start=0)
+### enumerate(iterable, start=0)
 Devuelve un objeto de enumeración. iterable debe ser una secuencia, un iterador o algún otro objeto que soporte la iteración. El método `__next__()` del iterador devuelto por enumerate() devuelve una tupla que contiene un recuento (desde el inicio, que por defecto es 0) y los valores obtenidos al iterar sobre iterable.
 
 ```python
@@ -262,7 +262,7 @@ Consulte `ast.literal_eval()` para ver una función que puede evaluar de forma s
 
 Genera un evento de auditoría exec con el objeto de código como argumento. También se pueden generar eventos de compilación de código.
 
-###exec(object[, globals[, locals]])
+### exec(object[, globals[, locals]])
 Esta función admite la ejecución dinámica del código de Python. El objeto debe ser una cadena o un objeto de código. Si es una cadena, la cadena se analiza como un conjunto de declaraciones de Python que luego se ejecuta (a menos que ocurra un error de sintaxis). 1 Si es un objeto de código, simplemente se ejecuta. En todos los casos, se espera que el código que se ejecuta sea válido como entrada de archivo (consulte la sección Entrada de archivo en el Manual de referencia). Tenga en cuenta que las declaraciones nonlocal, yield y return no se pueden usar fuera de las definiciones de funciones, incluso dentro del contexto del código pasado a la función exec(). El valor de retorno es Ninguno.
 
 En todos los casos, si se omiten las partes opcionales, el código se ejecuta en el ámbito actual. Si solo se proporcionan variables globales, debe ser un diccionario (y no una subclase de diccionario), que se utilizará tanto para las variables globales como para las locales. Si se dan valores globales y locales, se utilizan para las variables globales y locales, respectivamente. Si se proporcionan, los locales pueden ser cualquier objeto de mapeo. Recuerde que a nivel de módulo, globales y locales son el mismo diccionario. Si exec obtiene dos objetos separados como globales y locales, el código se ejecutará como si estuviera incrustado en una definición de clase.
@@ -274,14 +274,14 @@ Genera un evento de auditoría exec con el objeto de código como argumento. Tam
 Nota Las funciones integradas `globals()` y `locals()` devuelven el diccionario global y local actual, respectivamente, que puede ser útil para pasar como segundo y tercer argumento a `exec()`.
 Nota Los locales predeterminados actúan como se describe para la función locals() a continuación: no se deben intentar modificaciones en el diccionario de locales predeterminados. Pase un diccionario local explícito si necesita ver los efectos del código en los locales después de que regrese la función `exec()`.
 
-filter(function, iterable)
+### filter(function, iterable)
 Construya un iterador a partir de esos elementos de iterable para los cuales la función devuelve verdadero. iterable puede ser una secuencia, un contenedor que admita la iteración o un iterador. Si function es None, se asume la función de identidad, es decir, se eliminan todos los elementos de iterable que son falsos.
 
 Tenga en cuenta que `filter(function, iterable)` es equivalente a la expresión del generador (`item for item in iterable if function(item)`) si la función no es None y (`item for item in iterable if item`) si la función es None.
 
 Ver `itertools.filterfalse()` para la función complementaria que devuelve elementos de iterable para los cuales la función devuelve falso.
 
-###class float([x])
+### class float([x])
 Devuelve un número de punto flotante construido a partir de un número o cadena x.
 
 Si el argumento es una cadena, debe contener un número decimal, opcionalmente precedido por un signo y opcionalmente incrustado en un espacio en blanco. El signo opcional puede ser '+' o '-'; un signo '+' no tiene efecto sobre el valor producido. El argumento también puede ser una cadena que represente un NaN (no un número) o un infinito positivo o negativo. Más precisamente, la entrada debe ajustarse a la siguiente gramática después de eliminar los espacios en blanco iniciales y finales:
@@ -320,7 +320,7 @@ Cambiado en la versión 3.7: x ahora es un parámetro solo posicional.
 
 Cambiado en la versión 3.8: recurre a `__index__()` si `__float__()` no está definido.
 
-format(value[, format_spec])
+### format(value[, format_spec])
 Convierte un valor en una representación "formateada", según lo controlado por `format_spec`. La interpretación de `format_spec` dependerá del tipo de argumento de valor; sin embargo, existe una sintaxis de formato estándar que utilizan la mayoría de los tipos integrados: minilenguaje de especificación de formato.
 
 El format_spec predeterminado es una cadena vacía que generalmente da el mismo efecto que llamar a str(value).
@@ -329,28 +329,28 @@ Una llamada a `format(value, format_spec)` se traduce a `type(value)`.`__format_
 
 Cambiado en la versión 3.4: `object()`.`__format__(format_spec)` muestra un **TypeError** si `format_spec` no es una cadena vacía.
 
-###class frozenset([iterable])
+### class frozenset([iterable])
 Devuelve un nuevo objeto `frozenset`, opcionalmente con elementos tomados de iterable. `frozenset` es una clase integrada. Consulte `frozenset` y `Set Types — set`, frozenset para obtener documentación sobre esta clase.
 
 Para otros contenedores, consulte las clases integradas `set`, `list`, `tuple` y `dict`, así como el módulo de colecciones.
 
-###getattr(object, name[, default])
+### getattr(object, name[, default])
 Devuelve el valor del atributo nombrado del objeto. El nombre debe ser una cadena. Si la cadena es el nombre de uno de los atributos del objeto, el resultado es el valor de ese atributo. Por ejemplo, `getattr(x, 'foobar')` es equivalente a `x.foobar`. Si el atributo nombrado no existe, se devuelve el valor predeterminado si se proporciona; de lo contrario, se genera **AttributeError**.
 
 Nota Dado que la manipulación de nombres privados ocurre en el momento de la compilación, uno debe manipular manualmente el nombre de un atributo privado (atributos con dos guiones bajos al principio) para recuperarlo con `getattr()`.
 
-###globals()
+### globals()
 Devuelve el diccionario que implementa el espacio de nombres del módulo actual. Para el código dentro de las funciones, esto se establece cuando se define la función y permanece igual independientemente de dónde se llame a la función.
 
-###hasattr(object, name)
+### hasattr(object, name)
 Los argumentos son un objeto y una cadena. El resultado es True si la cadena es el nombre de uno de los atributos del objeto, False si no lo es. (Esto se implementa llamando a `getattr(objet, name)` y viendo si genera un **AttributeError** o no).
 
-###hash(object)
+### hash(object)
 Devuelve el valor hash del objeto (si lo tiene). Los valores hash son números enteros. Se utilizan para comparar rápidamente las claves del diccionario durante una búsqueda en el diccionario. Los valores numéricos que se comparan iguales tienen el mismo valor hash (incluso si son de diferentes tipos, como es el caso de 1 y 1.0).
 
 Nota Para los objetos con métodos `__hash__()` personalizados, tenga en cuenta que `hash()` trunca el valor devuelto en función del ancho de bits de la máquina host. Ver `__hash__()` para más detalles.
 
-###help([object])
+### help([object])
 Invocar el sistema de ayuda integrado. (Esta función está diseñada para uso interactivo). Si no se proporciona ningún argumento, el sistema de ayuda interactivo se inicia en la consola del intérprete. Si el argumento es una cadena, la cadena se busca como el nombre de un módulo, función, clase, método, palabra clave o tema de documentación, y se imprime una página de ayuda en la consola. Si el argumento es cualquier otro tipo de objeto, se genera una página de ayuda sobre el objeto.
 
 Tenga en cuenta que si aparece una barra slash(/) en la lista de parámetros de una función, al invocar `help()`, significa que los parámetros anteriores a la barra inclinada son solo posicionales. Para obtener más información, consulte la entrada de preguntas frecuentes sobre parámetros solo posicionales.
@@ -359,7 +359,7 @@ El módulo del sitio agrega esta función al espacio de nombres integrado.
 
 Modificado en la versión 3.4: los cambios en `pydoc` e inspeccionar significan que las firmas informadas para los invocables ahora son más completas y consistentes.
 
-###hex(x)
+### hex(x)
 Convierta un número entero en una cadena hexadecimal en minúsculas con el prefijo "0x". Si x no es un objeto int de Python, tiene que definir un método `__index__()` que devuelva un número entero. Algunos ejemplos:
 
 ```python
@@ -384,14 +384,14 @@ Consulte también `int()` para convertir una cadena hexadecimal en un número en
 
 Nota Para obtener una representación de cadena hexadecimal para un flotante, use el método `float.hex()`.
 
-###id(object)
+### id(object)
 Devuelve la “identity” de un objeto. Este es un número entero que se garantiza que es único y constante para este objeto durante su vida útil. Dos objetos con tiempos de vida no superpuestos pueden tener el mismo valor `id()`.
 
 Detalle de implementación de CPython: esta es la dirección del objeto en la memoria.
 
 Genera un evento de auditoría builtins.id con id de argumento.
 
-###input([prompt])
+### input([prompt])
 Si el argumento de solicitud está presente, se escribe en la salida estándar sin una nueva línea al final. Luego, la función lee una línea de la entrada, la convierte en una cadena (eliminando una nueva línea final) y la devuelve. Cuando se lee **EOF**, se genera **EOFError**. Ejemplo:
 
 ```python
@@ -404,7 +404,7 @@ Genera un evento de auditoría `builtins.input` con solicitud de argumento antes
 
 Genera un evento de auditoría `builtins.input/result` con el resultado después de leer correctamente la entrada.
 
-###class int([x])
+### class int([x])
 ```python
 class int(x, base=10)
 ```
@@ -424,13 +424,13 @@ Cambiado en la versión 3.8: recurre a `__index__()` si `__int__()` no está def
 
 Modificado en la versión 3.9.14: las entradas de cadena int y las representaciones de cadena se pueden limitar para ayudar a evitar ataques de denegación de servicio. Se genera un ValueError cuando se excede el límite al convertir una cadena x en un int o cuando convertir un int en una cadena excedería el límite. Consulte la documentación de limitación de longitud de conversión de cadena entera.
 
-###isinstance(object, classinfo)
+### isinstance(object, classinfo)
 Retorna **True** si el argumento del objeto es una instancia del argumento classinfo, o de una subclase (directa, indirecta o virtual) del mismo. Si el objeto no es un objeto del tipo dado, la función siempre devuelve **False**. Si `classinfo` es una tupla de objetos de tipo (o recursivamente, otras tuplas similares), devuelva True si el objeto es una instancia de cualquiera de los tipos. Si `classinfo` no es un tipo o una tupla de tipos y tales tuplas, se genera una excepción **TypeError**.
 
-###issubclass(class, classinfo)
+### issubclass(class, classinfo)
 Retorna **True** si class es una subclase (directa, indirecta o virtual) de`classinfo`. Una clase se considera una subclase de sí misma. `classinfo` puede ser una tupla de objetos de clase (o recursivamente, otras tuplas similares), en cuyo caso devuelve **True** si class es una subclase de cualquier entrada en `classinfo`. En cualquier otro caso, se genera una excepción **TypeError**.
 
-###iter(object[, sentinel])
+### iter(object[, sentinel])
 Devuelve un objeto iterador. El primer argumento se interpreta de manera muy diferente dependiendo de la presencia del segundo argumento. Sin un segundo argumento, el objeto debe ser un objeto de colección que admita el protocolo de iteración (el método `__iter__()`), o debe admitir el protocolo de secuencia (el método `__getitem__()` con argumentos enteros que comienzan en 0). Si no es compatible con ninguno de esos protocolos, se genera TypeError. Si se proporciona el segundo argumento, centinela, entonces el objeto debe ser un objeto invocable. El iterador creado en este caso llamará al objeto sin argumentos para cada llamada a su método `__next__()`; si el valor devuelto es igual a centinela, se generará **StopIteration**; de lo contrario, se devolverá el valor.
 
 Consulte también Tipos de iteradores.
@@ -444,23 +444,23 @@ with open('mydata.db', 'rb') as f:
         process_block(block)
 ```
 
-###len(s)
+### len(s)
 Devuelve la longitud (el número de elementos) de un objeto. El argumento `s` puede ser una secuencia (como un `string`, `bytes`, `tuple`, `list`, or `range`) o una colección (como `dictionary`, `set`, o `frozen set`).
 
 Detalle de implementación de **CPython**: len genera **OverflowError** en longitudes mayores que `sys.maxsize`, como `range(2 ** 100)`.
 
-###class list([iterable])
+### class list([iterable])
 En lugar de ser una función, la lista es en realidad un tipo de secuencia mutable, como se documenta en tipos de secuencia — `list`, `tuple`, `range`.
 
-###locals()
+### locals()
 Actualice y devuelva un diccionario que represente la tabla de símbolos local actual. Las variables libres son devueltas por `locals()` cuando se llaman en bloques de función, pero no en bloques de clase. Tenga en cuenta que a nivel de módulo, `locals()` y `globals()` son el mismo diccionario.
 
 Nota El contenido de este diccionario no debe modificarse; los cambios pueden no afectar los valores de las variables locales y libres utilizadas por el intérprete.
 
-###map(function, iterable, ...)
+### map(function, iterable, ...)
 Devuelve un iterador que aplica la función a cada elemento de iterable, arrojando los resultados. Si se pasan argumentos iterables adicionales, la función debe tomar esa cantidad de argumentos y se aplica a los elementos de todos los iterables en paralelo. Con múltiples iterables, el iterador se detiene cuando se agota el iterable más corto. Para los casos en los que las entradas de la función ya están organizadas en tuplas de argumentos, consulte itertools.`starmap()`.
 
-###max(iterable, *[, key, default])
+### max(iterable, *[, key, default])
 
 ```python
 max(arg1, arg2, *args[, key])
@@ -478,10 +478,10 @@ Nuevo en la versión 3.4: el argumento predeterminado de solo palabra clave.
 
 Cambiado en la versión 3.8: La clave puede ser Ninguna.
 
-###class memoryview(object)
+### class memoryview(object)
 Devuelve un objeto de "memory view" creado a partir del argumento dado. Consulte `memory view` para obtener más información.
 
-###min(iterable, *[, key, default])
+### min(iterable, *[, key, default])
 ```python
 min(arg1, arg2, *args[, key])
 ```
@@ -498,15 +498,15 @@ Nuevo en la versión 3.4: el argumento predeterminado de solo palabra clave.
 
 Cambiado en la versión 3.8: La clave puede ser **None**.
 
-###next(iterator[, default])
+### next(iterator[, default])
 Recupere el siguiente elemento del iterador llamando a su método `__next__()`. Si se proporciona el valor predeterminado, se devuelve si se agota el iterador; de lo contrario, se genera **StopIteration**.
 
-##class object
+## class object
 Return a new featureless object. object is a base for all classes. It has the methods that are common to all instances of Python classes. This function does not accept any arguments.
 
 Note object does not have a `__dict__`, so you can’t assign arbitrary attributes to an instance of the object class.
 
-oct(x)
+### oct(x)
 Convierta un número entero en una cadena octal con el prefijo "0o". El resultado es una expresión de Python válida. Si x no es un objeto int de Python, tiene que definir un método `__index__()` que devuelva un número entero. Por ejemplo:
 
 ```python
@@ -523,7 +523,7 @@ f'{10:#o}', f'{10:o}'
 
 Ver `format()` para más información.
 
-###open(file, mode='r', buffering=-1, encoding=None, errors=None, newline=None, closefd=True, opener=None)
+### open(file, mode='r', buffering=-1, encoding=None, errors=None, newline=None, closefd=True, opener=None)
 Abrir archivo y devolver un objeto de archivo correspondiente. Si no se puede abrir el archivo, se genera un OSError. Consulte Lectura y escritura de archivos para obtener más ejemplos de cómo utilizar esta función.
 
 file es un objeto similar a una ruta que proporciona la ruta (absoluta o relativa al directorio de trabajo actual) del archivo que se abrirá o un descriptor de archivo entero del archivo que se empaquetará. (Si se proporciona un descriptor de archivo, se cierra cuando se cierra el objeto de E/S devuelto, a menos que closefd se establezca en False).
@@ -544,10 +544,10 @@ mode es una cadena opcional que especifica el modo en que se abre el archivo. El
 
 '+' - Abrir para actualización (lectura y escritura)
 
-###ord(c)
+### ord(c)
 Dada una cadena que representa un carácter Unicode, devuelve un entero que representa el punto de código Unicode de ese carácter. Por ejemplo, `ord('a')` devuelve el número entero 97 y `ord('€')` (símbolo del euro) devuelve 8364. Este es el inverso de `chr()`.
 
-###pow(base, exp[, mod])
+### pow(base, exp[, mod])
 Regrese la base a la potencia `exp`; si mod está presente, regrese la base a la potencia `exp`, módulo mod (calculado más eficientemente que `pow(base, exp) % mod`). La forma de dos argumentos `pow(base, exp)` es equivalente a usar el operador de potencia: `base**exp`.
 
 Los argumentos deben tener tipos numéricos. Con tipos de operandos mixtos, se aplican las reglas de coerción para operadores aritméticos binarios. Para los operandos int, el resultado tiene el mismo tipo que los operandos (después de la coerción) a menos que el segundo argumento sea negativo; en ese caso, todos los argumentos se convierten en flotantes y se entrega un resultado flotante. Por ejemplo, `pow(10, 2)` devuelve 100, pero `pow(10, -2)` devuelve 0,01. Para una base negativa de tipo int o float y un exponente no integral, se obtiene un resultado complejo. Por ejemplo, `pow(-9, 0.5)` devuelve un valor cercano a 3j.
@@ -565,7 +565,7 @@ Cambiado en la versión 3.8: para los operandos int, la forma de tres argumentos
 
 Cambiado en la versión 3.8: Permitir argumentos de palabras clave. Anteriormente, solo se admitían argumentos posicionales.
 
-###print(*objects, sep=' ', end='\n', file=sys.stdout, flush=False)
+### print(*objects, sep=' ', end='\n', file=sys.stdout, flush=False)
 
 Imprime objetos en el archivo de flujo de texto, separados por `sep` y seguidos por `end`. `sep`, `end`, `file` y `flush`, si están presentes, deben proporcionarse como argumentos de palabras clave.
 
@@ -577,7 +577,7 @@ El archivo generalmente determina si la salida se almacena en búfer, pero si el
 
 Cambiado en la versión 3.3: Se agregó el argumento de palabra clave de descarga.
 
-###class property(fget=None, fset=None, fdel=None, doc=None)
+### class property(fget=None, fset=None, fdel=None, doc=None)
 Devuelve un atributo de propiedad.
 
 fget es una función para obtener un valor de atributo. fset es una función para establecer un valor de atributo. fdel es una función para eliminar un valor de atributo. Y doc crea una cadena de documentación para el atributo.
@@ -641,7 +641,7 @@ El objeto de propiedad devuelto también tiene los atributos fget, fset y fdel c
 
 Cambiado en la versión 3.5: Las cadenas de documentación de los objetos de propiedad ahora se pueden escribir.
 
-###class range(stop)
+### class range(stop)
 
 ```python
 class range(start, stop[, step])
@@ -649,15 +649,15 @@ class range(start, stop[, step])
 
 En lugar de ser una función, el rango es en realidad un tipo de secuencia inmutable, como se documenta en Rangos y tipos de secuencia — list, tuple, range.
 
-###repr(object)
+### repr(object)
 
 Devuelve una cadena que contiene una representación imprimible de un objeto. Para muchos tipos, esta función intenta devolver una cadena que produciría un objeto con el mismo valor cuando se pasa a `eval()`, de lo contrario, la representación es una cadena encerrada entre corchetes angulares que contiene el nombre del tipo del objeto junto con información adicional que a menudo incluye el nombre y la dirección del objeto. Una clase puede controlar lo que devuelve esta función para sus instancias definiendo un método `__repr__()`.
 
-###reversed(seq)
+### reversed(seq)
 
 Devuelve un iterador inverso. seq debe ser un objeto que tenga un método `__reversed__()` o admita el protocolo de secuencia (el método `__len__()` y el método `__getitem__()` con argumentos enteros que comienzan en 0).
 
-###round(number[, ndigits])
+### round(number[, ndigits])
 Devuelve el número redondeado a la precisión de los dígitos después del punto decimal. Si se omite ndigits o es None, devuelve el entero más cercano a su entrada.
 
 Para los tipos incorporados que admiten `round()`, los valores se redondean al múltiplo de 10 más cercano a la potencia menos los dígitos; si dos múltiplos son igualmente cercanos, el redondeo se realiza hacia la opción par (por ejemplo, tanto `round(0.5)` como `round(-0.5)` son 0, y `round(1.5)` es 2). Cualquier valor entero es válido para dígitos (positivo, cero o negativo). El valor de retorno es un número entero si se omite ndigits o Ninguno. De lo contrario, el valor de retorno tiene el mismo tipo que el número.
@@ -666,17 +666,17 @@ Para un número de objeto de Python general, redondee los delegados a `number.__
 
 Nota El comportamiento de `round()` para flotantes puede ser sorprendente: por ejemplo, `round(2.675, 2)` da 2.67 en lugar del esperado 2.68. Esto no es un error: es el resultado del hecho de que la mayoría de las fracciones decimales no se pueden representar exactamente como un flotante. Consulte Aritmética de coma flotante: problemas y limitaciones para obtener más información.
 
-###class set([iterable])
+### class set([iterable])
 Devuelve un nuevo objeto establecido, opcionalmente con elementos tomados de iterable. set es una clase incorporada. Consulte `set` y Set Types — `set`, `frozenset` para obtener documentación sobre esta clase.
 
 Para otros contenedores, consulte las clases integradas `frozenset`, `list`, `tuple` y `dict`, así como el módulo de colecciones.
 
-###setattr(object, name, value)
+### setattr(object, name, value)
 Esta es la contrapartida de `getattr()`. Los argumentos son un objeto, una cadena y un valor arbitrario. La cadena puede nombrar un atributo existente o un atributo nuevo. La función asigna el valor al atributo, siempre que el objeto lo permita. Por ejemplo, `setattr(x, 'foobar', 123)` es equivalente a `x.foobar = 123`.
 
 Nota Dado que la manipulación de nombres privados ocurre en el momento de la compilación, uno debe manipular manualmente el nombre de un atributo privado (atributos con dos guiones bajos al principio) para configurarlo con `setattr()`.
 
-###class slice(stop)
+### class slice(stop)
 
 ```python
 class slice(start, stop[, step])
@@ -684,7 +684,7 @@ class slice(start, stop[, step])
 
 Devuelve un objeto de segmento que representa el conjunto de índices especificados por `range(start, stop, step)`. Los argumentos `start` and `step` estan en None de manera predeterminada. Los objetos Slice tienen atributos de solo lectura en `start`, `stop` and `step` que simplemente devuelven los valores del argumento (o su valor predeterminado). No tienen otra funcionalidad explícita; sin embargo, son utilizados por `NumPy` y otros paquetes de terceros. Los objetos de división también se generan cuando se usa la sintaxis de indexación extendida. Por ejemplo: `a[start:stop:step]` or `a[start:stop, i]`. See `itertools.islice()` para una versión alternativa que devuelve un iterador.
 
-###sorted(iterable, /, *, key=None, reverse=False)
+### sorted(iterable, /, *, key=None, reverse=False)
 
 Devuelve una nueva lista ordenada de los elementos en iterable.
 
@@ -702,7 +702,7 @@ El algoritmo de clasificación usa solo < comparaciones entre elementos. Si bien
 
 Para ver ejemplos de clasificación y un breve tutorial de clasificación, consulte Cómo clasificar.
 
-###@staticmethod
+### @staticmethod
 Transformar un método en un método estático.
 
 Un método estático no recibe un primer argumento implícito. Para declarar un método estático, usa este modismo:
@@ -737,14 +737,14 @@ Devuelve una versión str del objeto. Ver `str()` para más detalles.
 
 str es la clase de cadena incorporada. Para obtener información general sobre las cadenas, consulte Tipo de secuencia de texto — `str`.
 
-###sum(iterable, /, start=0)
+### sum(iterable, /, start=0)
 Suma el inicio y los elementos de un iterable de izquierda a derecha y devuelve el total. Los elementos del iterable son normalmente números, y no se permite que el valor inicial sea una cadena.
 
 Para algunos casos de uso, existen buenas alternativas a `sum()`. La forma preferida y rápida de concatenar una secuencia de cadenas es llamando a `''.join(sequence)`. Para agregar valores de coma flotante con mayor precisión, consulte `math.fsum()`. Para concatenar una serie de iterables, considere usar `itertools.chain()`.
 
 Modificado en la versión 3.8: el parámetro de inicio se puede especificar como un argumento de palabra clave.
 
-###super([type[, object-or-type]])
+### super([type[, object-or-type]])
 Devuelve un objeto proxy que delega llamadas de método a una clase de tipo padre o hermano. Esto es útil para acceder a métodos heredados que han sido anulados en una clase.
 
 El objeto o tipo determina el orden de resolución del método que se buscará. La búsqueda comienza desde la clase justo después del tipo.
@@ -775,10 +775,10 @@ También tenga en cuenta que, aparte de la forma de argumento cero, super() no s
 
 Para sugerencias prácticas sobre cómo diseñar clases cooperativas usando `super()`, consulte la guía para usar `super()`.
 
-###class tuple([iterable])
+### class tuple([iterable])
 En lugar de ser una función, la tupla es en realidad un tipo de secuencia inmutable, como se documenta en Tuplas y tipos de secuencia — list, tuple, range.
 
-###class type(object)
+### class type(object)
 ```python
 class type(name, bases, dict, **kwds)
 ```
@@ -804,7 +804,7 @@ Consulte también Personalización de la creación de clases.
 
 Modificado en la versión 3.6: las subclases de tipo que no anulan type.`__new__` ya no pueden usar la forma de un argumento para obtener el tipo de un objeto.
 
-vars([object])
+### vars([object])
 Devuelve el atributo `__dict__` para un módulo, clase, instancia o cualquier otro objeto con un atributo `__dict__`.
 
 Los objetos como módulos e instancias tienen un atributo `__dict__` actualizable; sin embargo, otros objetos pueden tener restricciones de escritura en sus atributos `__dict__` (por ejemplo, las clases usan tipos.MappingProxyType para evitar actualizaciones directas del diccionario).
@@ -813,7 +813,7 @@ Sin un argumento, vars() actúa como `locals()`. Tenga en cuenta que el dicciona
 
 Se genera una excepción `TypeError` si se especifica un objeto pero no tiene un atributo `__dict__` (por ejemplo, si su clase define el atributo `__slots__`).
 
-###zip(*iterables)
+### zip(*iterables)
 Cree un iterador que agregue elementos de cada uno de los iterables.
 
 Devuelve un iterador de tuplas, donde la i-ésima tupla contiene el i-ésimo elemento de cada una de las secuencias de argumentos o iterables. El iterador se detiene cuando se agota el iterable de entrada más corto. Con un único argumento iterable, devuelve un iterador de 1 tupla. Sin argumentos, devuelve un iterador vacío. Equivalente a:
@@ -847,7 +847,7 @@ list(zipped)
 x2, y2 = zip(*zip(x, y))
 x == list(x2) and y == list(y2)
 ```
-###__import__(name, globals=None, locals=None, fromlist=(), level=0)
+### __import__(name, globals=None, locals=None, fromlist=(), level=0)
 Nota Esta es una función avanzada que no se necesita en la programación Python diaria, a diferencia de `importlib.import_module()`.
 Esta función es invocada por la declaración de importación. Se puede reemplazar (importando el módulo incorporado y asignándolo a `builtins.__import__`) para cambiar la semántica de la declaración de importación, pero se desaconseja encarecidamente hacerlo, ya que generalmente es más simple usar ganchos de importación (ver PEP 302) para lograr los mismos objetivos y no causa problemas con el código que asume que se está utilizando la implementación de importación predeterminada. También se desaconseja el uso directo de `__import__()` en favor de `importlib.import_module()`.
 
