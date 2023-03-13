@@ -1,39 +1,36 @@
-# Variables in Python
+# Variables en Python
 
-first_name = 'Asabeneh'
-last_name = 'Yetayeh'
-country = 'Finland'
-city = 'Helsinki'
+first_name = 'Alejandro'
+last_name = 'Morgan'
+country = 'Mexico'
+city = 'Sinaloa'
 age = 250
-is_married = True
 skills = ['HTML', 'CSS', 'JS', 'React', 'Python']
 person_info = {
-    'firstname':'Asabeneh', 
-    'lastname':'Yetayeh', 
-    'country':'Finland',
-    'city':'Helsinki'
+    'firstname':'Alejandro', 
+    'lastname':'Morgan', 
+    'country':'Mexico',
+    'city':'Sinaloa'
     }
 
-# Printing the values stored in the variables
+# Imprimir los valores almacenados en las variables
 
-print('First name:', first_name)
-print('First name length:', len(first_name))
-print('Last name: ', last_name)
-print('Last name length: ', len(last_name))
-print('Country: ', country)
-print('City: ', city)
-print('Age: ', age)
-print('Married: ', is_married)
-print('Skills: ', skills)
-print('Person information: ', person_info)
+print('Nombre:', first_name)
+print('Longitud del nombre:', len(first_name))
+print('Apellido: ', last_name)
+print('Longitud del apellido: ', len(last_name))
+print('Pais: ', country)
+print('Ciudad: ', city)
+print('Edad: ', age)
+print('Habilidades: ', skills)
+print('Información personal: ', person_info)
 
-# Declaring multiple variables in one line
+# Declarar múltiples variables en una línea
 
-first_name, last_name, country, age, is_married = 'Asabeneh', 'Yetayeh', 'Helsink', 250, True
+first_name, last_name, country, age = 'Alejandro', 'Morgan', 'Mexico', 250
 
-print(first_name, last_name, country, age, is_married)
-print('First name:', first_name)
-print('Last name: ', last_name)
-print('Country: ', country)
-print('Age: ', age)
-print('Married: ', is_married)
+print(first_name, last_name, country, age)
+print('Nombre:', first_name)
+print('Morgan: ', last_name)
+print('México: ', country)
+print('Edad: ', age)
