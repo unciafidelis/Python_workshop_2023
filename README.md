@@ -6,11 +6,11 @@ Este curso pretende mostrar los aspectos básicos de la programación en python,
 
 Alumnos:
 
-Alicia - @arosales73
-Paloma - @paloma-torres
-Alberto - @BetoMarquezzz
-Rodrigo - @banolu
-Joel - @leoboyean
-Victor - @victorbernal
-Maria Inés - @MarinesRivas
-Ingrid - @IngridGaGo
+* Alicia - @arosales73
+* Paloma - @paloma-torres
+* Alberto - @BetoMarquezzz
+* Rodrigo - @banolu
+* Joel - @leoboyean
+* Victor - @victorbernal
+* Maria Inés - @MarinesRivas
+* Ingrid - @IngridGaGo
