@@ -32,7 +32,7 @@ git config --global user.email "MY_NAME@example.com"
 ```
 Nota: Si no se realiza esta autenticación antes de la vinculación de VSCODE a github saldrá un error:
 
-<img src="../assets/git_error.png"  width="600" height="300">
+<img src="../assets/git_error.png"  width="600" height="200">
 
 Despues de finalizado este proceso cerramos terminal y nos dirigimos al control de código fuente | Source control | Control de versiones y procedemos a realizar el **Sign up for GitHub** 
 
