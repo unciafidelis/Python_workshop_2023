@@ -14,6 +14,7 @@ Alumnos:
 * Victor - [victorbernal - Python_Workshop_2023](https://github.com/victorbernal/)
 * Maria Inés - [MarinesRivas - Python_Workshop_2023](https://github.com/MarinesRivas/)
 * Ingrid - [IngridGaGo - Python_Workshop_2023](https://github.com/IngridGaGo/)
+* Gabriela - [xtrem19 - Python_Workshop_2023](https://github.com/xtrem19/)
 
 Instructor:
 
