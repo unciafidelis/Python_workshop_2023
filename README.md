@@ -6,11 +6,15 @@ Este curso pretende mostrar los aspectos básicos de la programación en python,
 
 Alumnos:
 
-* Alicia - @arosales73
-* Paloma - @paloma-torres
-* Alberto - @BetoMarquezzz
-* Rodrigo - @banolu
-* Joel - @leoboyean
-* Victor - @victorbernal
-* Maria Inés - @MarinesRivas
-* Ingrid - @IngridGaGo
+* Alicia - [arosales73 - Python_Workshop_2023](https://github.com/arosales73/)
+* Paloma - [paloma-torres - Python_Workshop_2023](https://github.com/paloma-torres/)
+* Alberto - [BetoMarquezzz - Python_Workshop_2023](https://github.com/BetoMarquezzz/)
+* Rodrigo - [banolu - Python_Workshop_2023](https://github.com/banolu/)
+* Joel - [leoboyean - Python_Workshop_2023](https://github.com/leoboyean/)
+* Victor - [victorbernal - Python_Workshop_2023](https://github.com/victorbernal/)
+* Maria Inés - [MarinesRivas - Python_Workshop_2023](https://github.com/MarinesRivas/)
+* Ingrid - [IngridGaGo - Python_Workshop_2023](https://github.com/IngridGaGo/)
+
+Instructor:
+
+* Alejandro - [Unciafidelis - Python_Workshop_2023](https://github.com/unciafidelis/)
