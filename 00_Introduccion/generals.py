@@ -25,7 +25,7 @@ print(type(1 + 2))               # int /Entero
 print(type(3.5 * 9.78))          # float // Flotante
 print(type(1j + 1 + 1j + 1))     # Complex // Complejo
 print(type('Python'))            # String // Cadena
-print((['lol', 2, 3]))           # List // Lista
+print(type(['lol', 2, 3]))           # List // Lista
 print(type({'curso':'Python'}))  # Dictionary // Diccionario
 print(type({'lol', 3.14, 2.7}))    # Set // Conjunto
 print(type(('lol', 3.14, 2.7)))    # Tuple // Tupla

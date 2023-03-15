@@ -11,7 +11,7 @@ Alumnos:
 * Alberto - [BetoMarquezzz - Python_Workshop_2023](https://github.com/BetoMarquezzz/)
 * Rodrigo - [banolu - Python_Workshop_2023](https://github.com/banolu/)
 * Joel - [leoboyean - Python_Workshop_2023](https://github.com/leoboyean/)
-* Victor - [victorbernal - Python_Workshop_2023](https://github.com/victorbernal/)
+* Victor - [victor-bernal-serrano - Python_Workshop_2023](https://github.com/victor-bernal-serrano/)
 * Maria Inés - [MarinesRivas - Python_Workshop_2023](https://github.com/MarinesRivas/)
 * Ingrid - [IngridGaGo - Python_Workshop_2023](https://github.com/IngridGaGo/)
 * Gabriela - [xtrem19 - Python_Workshop_2023](https://github.com/xtrem19/)
