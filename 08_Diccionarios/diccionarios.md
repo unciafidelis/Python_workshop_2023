@@ -55,7 +55,7 @@ person = {
         'zipcode':'02210'
     }
     }
-print(len(person)) # 7
+print(len(person)) # 6
 
 ```
 
