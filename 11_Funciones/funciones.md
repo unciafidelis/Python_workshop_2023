@@ -1,333 +1,326 @@
-# Introducción
+## Funciones
 
-El uso de una función de Python es el primer paso para codificar después de las estructuras de datos y los condicionales básicos. Las funciones permiten la reutilización, lo que evita la duplicación de código. Cuando los proyectos reutilizan código con funciones, se vuelven más legibles y fáciles de mantener.
+Hasta ahora hemos visto muchas funciones integradas de Python. En esta sección, nos centraremos en las funciones personalizadas. ¿Qué es una función? Antes de comenzar a hacer funciones, aprendamos qué es una función y por qué las necesitamos.
 
-## Escenario: Organización de datos sobre un cohete
+### Definiendo una función
 
-Imagina que vas a crear un programa para construir información precisa sobre un cohete espacial. Las funciones reutilizables te permitirán no solo calcular información, sino también crear valores combinando entradas y salidas de otras funciones.
+Una función es un bloque reutilizable de código o declaraciones de programación diseñadas para realizar una determinada tarea. Para definir o declarar una función, Python proporciona la palabra clave _def_. La siguiente es la sintaxis para definir una función. El bloque de función de código se ejecuta solo si se llama o invoca la función.
 
-## ¿Qué descubrirás?
-En este módulo, aprenderás a:
+### Declarar y llamar a una función
 
-* Trabajar con entradas predeterminadas, obligatorias y de carácter comodín.
-* Hacer que el código sea reutilizable extrayendo patrones comunes en funciones independientes.
-* Devolver valores, estructuras de datos o resultados calculados.
+Cuando hacemos una función, la llamamos declarar una función. Cuando comenzamos a usarlo, lo llamamos *llamar* o *invocar* una función. La función se puede declarar con o sin parámetros.
 
-## ¿Cuál es el objetivo principal?
-Al final de este módulo, comprenderás algunas de las reglas y el comportamiento asociado a las funciones, incluida la forma de controlar las entradas y salidas.
-
----
-
-## Aspectos básicos de las funciones de Python
-
-Las funciones son el siguiente paso después de haber aprendido los conceptos básicos de programación de Python. En su forma más sencilla, una función contiene código que siempre devuelve un valor (o valores). En algunos casos, una función también tiene entradas opcionales u obligatorias.
-
-Al empezar a escribir código que duplica otras partes del programa, se convierte en una oportunidad perfecta para extraer el código en una función. Aunque compartir código común mediante funciones es útil, también se puede limitar el tamaño del código extrayendo partes en funciones más pequeñas (y legibles).
-
-Los programas que evitan la duplicación y evitan funciones de gran tamaño mediante funciones más pequeñas son más legibles y fáciles de mantener. También son más fáciles de depurar cuando las cosas no funcionan correctamente.
-
-Hay varias reglas sobre las entradas de funciones que son fundamentales para aprovechar al máximo todo lo que las funciones tienen que ofrecer.
-
-*Aunque se usa el término entrada para describir las funciones que se aceptan, estos elementos normalmente se denominan argumentos y/o parámetros. Para mantener la coherencia en este módulo, a las entradas las denominaremos argumentos.*
-
-### Funciones sin argumentos
-Para crear una función, utilizamos la palabra clave `def`, seguida de un nombre, paréntesis y, después, del cuerpo con el código de función:
-
-```
-# Defino mi función
-def rocket_parts():
-    print('payload, propellant, structure')
+```python
+# sintaxis
+# Declarar la función
+def nombre_de_funcion():
+    #code
+# Llamar la función
+nombre_de_funcion()
 ```
 
-En este caso, rocket_parts es el nombre de la función. Ese nombre va seguido de paréntesis vacíos, que indican que no se necesitan argumentos. El último es el código, con sangría de cuatro espacios. Para trabajar con la función, debes llamarla por su nombre usando paréntesis:
+### función sin parámetros
 
-```
-# Llamo a mi función
+Las funciones pueden ser declaradas sin parámetros.
 
->>> rocket_parts()
-'payload, propellant, structure'
-```
+**Ejemplo:**
 
-La función rocket_parts() no toma ningún argumento e imprime una instrucción sobre la gravedad. Si necesitas usar un valor que devuelve una función, puedes asignar la salida de la función a una variable:
+```python
+def generar_nombre_completo ():
+    nombre = 'Alejandro'
+    apellido = 'Morgan'
+    espacio = ' '
+    nombre_completo = nombre + espacio + apellido
+    print(nombre_completo)
+generar_nombre_completo () # Llamar la función
 
-```
->>> output = rocket_parts()
-payload, propellant, structure
-
->>> output is None
-True
-```
-
-Puede parecer sorprendente que el valor de la variable output sea None. Esto se debe a que la función rocket_parts() no ha devuelto explícitamente un valor. En Python, si una función no devuelve explícitamente un valor, devuelve implícitamente None. Actualizar la función para devolver la cadena en lugar de imprimirla hace que la variable output tenga un valor distinto:
-
-```
->>> def rocket_parts():
-...     return 'payload, propellant, structure'
-...
->>> output = rocket_parts()
->>> output
-'payload, propellant, structure'
-```
-Si necesitas usar el valor de una función, esa función debe devolver el valor explícitamente. De lo contrario; se devolverá `None`.
-
-*No es necesario asignar siempre la devolución de una función. En la mayoría de los casos en los que una función no devuelve un valor (o valores) explícitamente, significa que no es necesario asignar ni usar el valor implícito `None` que se devuelve.*
-
-### Argumentos opcionales y requeridos
-En Python, varias funciones integradas requieren argumentos. Algunas funciones integradas hacen que los argumentos sean opcionales. Las funciones integradas están disponibles de inmediato, por lo que no es necesario importarlas explícitamente.
-
-Un ejemplo de una función integrada que requiere un argumento es `any()`. Esta función toma un objeto iterable (por ejemplo, una lista) y devuelve `True` si algún elemento del objeto iterable es `True`. De lo contrario, devuelve `False`.
-
-```
->>> any([True, False, False])
-True
->>> any([False, False, False])
-False
+def agregar_dos_numeros ():
+    numero_uno = 2
+    numero_dos = 3
+    total = numero_uno + numero_dos
+    print(total)
+agregar_dos_numeros()
 ```
 
-Si llamamos a `any()` sin ningún argumento, se genera una excepción útil. El mensaje de error explica que necesita al menos un argumento:
+### Funciones que regresan un valor - Parte 1
 
-```
->>> any()
-Traceback (most recent call last):
-  File '<stdin>', line 1, in <module>
-TypeError: any() takes exactly one argument (0 given)
-```
+Las funciones también puede devolver valores, si una función no tiene una declaración de retorno, el valor de la función es Ninguno. Reescribamos las funciones anteriores usando return. De ahora en adelante, obtenemos un valor de una función cuando la llamamos y la imprimimos.
 
-Puedes comprobar que algunas funciones permiten el uso de argumentos opcionales mediante otra función integrada denominada `str()`. Esta función crea una cadena a partir de un argumento. Si no se pasa ningún argumento, devuelve una cadena vacía:
+```python
+def generar_nombre_completo ():
+    nombre = 'Alejandro'
+    apellido = 'Morgan'
+    espacio = ' '
+    nombre_completo = nombre + espacio + apellido
+    return nombre_completo
+print(generar_nombre_completo())
 
-```
->>> str()
-''
->>> str(15)
-'15'
-```
-
-## Uso de argumentos en una función de Python
-
-Ahora que sabes cómo crear una función sin entradas, el paso siguiente es crear funciones que requieran un argumento. El uso de argumentos hace que las funciones sean más flexibles, ya que pueden hacer más y condicionalizar lo que hacen.
-
-### Exigencia de un argumento
-Si vas a pilotar un cohete, una función sin entradas obligatorias es como un equipo con un botón que le indique la hora. Si presionas el botón, una voz computarizada le indicará la hora. Pero una entrada necesaria puede ser un destino para calcular la distancia del viaje. Las entradas obligatorias se denominan *argumentos* para la función.
-
-Para requerir un argumento, agrégalo entre paréntesis:
-
-```
-def distance_from_earth(destination):
-    if destination == 'Moon':
-        return '238,855'
-    else:
-        return 'Unable to compute to that destination'
-```
-Intenta llamar a la función distance_from_earth() sin argumento alguno:
-
-```
->>> distance_from_earth()
-Traceback (most recent call last):
-  File '<stdin>', line 1, in <module>
-TypeError: distance_from_earth() missing 1 required positional argument: 'destination'
+def agregar_dos_numeros ():
+    numero_uno = 2
+    numero_dos = 3
+    total = numero_uno + numero_dos
+    return total
+print(agregar_dos_numeros())
 ```
 
-Python genera `TypeError` con un mensaje de error que indica que la función requiere un argumento denominado destination. Si se pide al equipo del cohete que calcule la distancia del viaje con un destino, debes solicitar que un destino es un requisito. El código de ejemplo tiene dos rutas de acceso para una respuesta, una para la Luna y la otra para cualquier otra cosa. Use la Luna como entrada para obtener una respuesta:
+### Función con Parámetros
 
-```
->>> distance_from_earth('Moon')
-'238,855'
-```
+En una función podemos pasar diferentes tipos de datos (número, cadena, booleano, lista, tupla, diccionario o conjunto) como parámetro
 
-Dado que hay una condición catch-all, intenta usar cualquier otra cadena como destino para comprobar ese comportamiento:
+- Parámetro único: si nuestra función toma un parámetro, debemos llamar a nuestra función con un argumentoo
 
-```
->>> distance_from_earth('Saturn')
-'Unable to compute to that destination'
-```
-
-### Varios argumentos necesarios
-Para usar varios argumentos, debes separarlos con una coma. Vamos a crear una función que pueda calcular cuántos días se tardarán en llegar a un destino, dadas la distancia y una velocidad constante:
-
-```
-def days_to_complete(distance, speed):
-    hours = distance/speed
-    return hours/24
+```python
+  # sintaxis
+  # Declarar la función
+  def nombre_de_funcion(parametro):
+    codigo
+  # Llamar la función
+  print(nombre_de_funcion(argumento))
 ```
 
-Ahora usa la distancia entre la Tierra y la Luna para calcular cuántos días tardaría en llegar a la Luna con un límite de velocidad común de 120 kilómetros por hora:
+**Ejemplo:**
 
-```
->>> days_to_complete(238855, 75)
-132.69722222222222
-```
-### Funciones como argumentos
-Puedes usar el valor de la función days_to_complete() y asignarlo a una variable y, después, pasarlo a round() (una función integrada que redondea al número entero más cercano) para obtener un número entero:
+```python
+def saludo (nombre):
+    mensaje = nombre + ', bienvenido al taller de python!'
+    return mensaje
 
-```
->>> total_days = days_to_complete(238855, 75)
->>> round(total_days)
-133
-```
-Pero un patrón útil es pasar funciones a otras funciones en lugar de asignar el valor devuelto:
+print(saludo('Alejandro'))
 
-```
->>> round(days_to_complete(238855, 75))
-133
-```
+def agrega_diez(numero):
+    diez = 10
+    return numero + diez
+print(agrega_diez(90))
 
-**Sugerencia**
+def numero_al_cuadrado(x):
+    return x * x
+print(numero_al_cuadrado(2))
 
-Aunque pasar funciones directamente a otras funciones como entrada es útil, existe la posibilidad de que se reduzca la legibilidad. Este patrón es especialmente problemático cuando las funciones requieren muchos argumentos.
+def area_del_circulo (r):
+    PI = 3.14
+    area = PI * r ** 2
+    return area
+print(area_del_circulo(10))
 
-## Uso de argumentos de palabra clave en Python
-
-Los argumentos opcionales requieren un valor predeterminado asignado a ellos. Estos argumentos con nombre se denominan *argumentos de palabra clave*. Los valores del argumento de palabra clave deben definirse en las propias funciones. Cuando se llama a una función definida con argumentos de palabra clave, no es necesario usarlos en absoluto.
-
-La misión Apolo 11 tardó unas 51 horas en llegar a la Luna. Vamos a crear una función que devuelva la hora estimada de llegada usando el mismo valor que la misión Apolo 11 como valor predeterminado:
-
-```
-from datetime import timedelta, datetime
-
-def arrival_time(hours=51):
-    now = datetime.now()
-    arrival = now + timedelta(hours=hours)
-    return arrival.strftime('Arrival: %A %H:%M')
+def suma_de_numeros(n):
+    total = 0
+    for i in range(n+1):
+        total+=i
+    print(total)
+print(suma_de_numeros(10)) # 55
+print(suma_de_numeros(100)) # 5050
 ```
 
-La función usa el módulo `datetime` para definir la hora actual. Usa `timedelta` para permitir la operación de suma que da como resultado un objeto de hora nuevo. Después de calcular ese resultado, devuelve la estimación `arrival` con formato de cadena. Intentando llamarla sin algún argumento:
+- Dos parametros: Una funcion puede tener o no parametro o parametros. Una función también puede tener dos o más parámetros. Si nuestra funcion toma parametros deberiamos llamarla con argumentos. Comprobemos una función con dos parámetros:
 
-```
->>> arrival_time()
-'Arrival: Saturday 16:42'
-```
-
-Aunque la función define un argumento de palabra clave, no permite pasar uno cuando se llama a una función. En este caso, la variable `hours` tiene como valor predeterminado `51`. Para comprobar que la fecha actual es correcta, usamos `0` como valor para `hours`:
-
-```
->>> arrival_time(hours=0)
-'Arrival: Thursday 13:42'
+```python
+  # sintaxis
+  # Declarar la función
+  def nombre_de_funcion(para1, para2):
+    codigo
+  # Llamar la función
+  print(nombre_de_funcion(arg1, arg2))
 ```
 
-### Combinación de argumentos y argumentos de palabra clave
+**Ejemplo:**
 
-A veces, una función necesita una combinación de argumentos de palabra clave y argumentos. En Python, esta combinación sigue un orden específico. Los argumentos siempre se declaran primero, seguidos de argumentos de palabra clave.
+```python
+def generar_nombre_completo (nombre, apellido):
+    espacio = ' '
+      nombre_completo = nombre + espacio + apellido
+      return nombre_completo
+print('Nombre completo: ', generar_nombre_completo('Alejandro','Morgan'))
 
-Actualizando la función `arrival_time()` para que tome un argumento necesario, que es el nombre del destino:
+def suma_dos_numeros (numero_uno, numero_dos):
+    suma = numero_uno + numero_dos
+    return suma
+print('Suma de dos numeros: ', suma_dos_numeros(1, 9))
 
-```
-from datetime import timedelta, datetime
+def calcular_edad (año_actual, año_nacimiento):
+    edad = año_actual - año_nacimiento
+    return edad
 
-def arrival_time(destination, hours=51):
-    now = datetime.now()
-    arrival = now + timedelta(hours=hours)
-    return arrival.strftime(f'{destination} Arrival: %A %H:%M')
-```
+print('Edad: ', calcular_edad(2021, 1819))
 
-Dado que hemos agregado un argumento necesario, ya no es posible llamar a la función sin ningún argumento:
-
-
-```
->>> arrival_time()
-Traceback (most recent call last):
-  File '<stdin>', line 1, in <module>
-TypeError: arrival_time() missing 1 required positional argument: 'destination'
-```
-Usamos 'Moon' como valor para destination a fin de evitar el error:
-
-```
->>> arrival_time('Moon')
-'Moon Arrival: Saturday 16:54'
-```
-También podemos pasar más de dos valores, pero debemos separarlos con una coma. Se tarda aproximadamente 8 minutos (0,13 horas) en entrar en órbita, así que utilizaremos eso como argumento:
-
-```
->>> arrival_time('Orbit', hours=0.13)
-'Orbit Arrival: Thursday 14:11'
+def peso_de_objeto (masa, gavedad):
+    peso = str(masa * gavedad)+ ' N' # el valor tiene que ser cambiado a una cadena primero
+    return peso
+print('Peso de un objeto en Newtons: ', peso_de_objeto(100, 9.81))
 ```
 
-## Uso de argumentos de variable en Python
+### Pasar argumentos con clave y valor
 
-En Python, puedes usar cualquier número de argumentos de palabra clave y argumentos sin necesidad de declarar cada uno de ellos. Esta capacidad es útil cuando una función puede obtener un número desconocido de entradas.
+Si pasamos los argumentos con clave y valor, el orden de los argumentos no importa.
 
-### Argumentos de variable
-Los argumentos en las funciones son necesarios. Pero cuando se usan argumentos de variable, la función permite pasar cualquier número de argumentos (incluido `0`). La sintaxis para usar argumentos de variable es agregar un asterisco único como prefijo (`*`) antes del nombre del argumento.
-
-La función siguiente imprime los argumentos recibidos:
-
-```
-def variable_length(*args):
-    print(args)
-```
-*No es necesario denominar a los argumentos de variable `args`. Puedes usar cualquier nombre de variable válido. Aunque es habitual ver *args o *a, debe intentar usar la misma convención en un proyecto.*
-
-En este caso, `*args` indica a la función que acepta cualquier número de argumentos (incluido `0`). En la función, `args` ahora está disponible como la variable que contiene todos los argumentos como una tupla. Pruebe la función pasando cualquier número o tipo de argumentos:
-
-```
->>> variable_length()
-()
->>> variable_length('one', 'two')
-('one', 'two')
->>> variable_length(None)
-(None,)
-```
-Como puedes ver, no hay ninguna restricción en el número o tipo de argumentos que se pasan.
-
-Un cohete realiza varios pasos antes de un lanzamiento. En función de las tareas o retrasos, estos pasos pueden tardar más de lo previsto. Vamos a crear una función de longitud variable que pueda calcular cuántos minutos quedan hasta el inicio, dado el tiempo que va a tardar cada paso:
-
-```
-def sequence_time(*args):
-    total_minutes = sum(args)
-    if total_minutes < 60:
-        return f'Total time to launch is {total_minutes} minutes'
-    else:
-        return f'Total time to launch is {total_minutes/60} hours'
-```
-Probamos la función pasando cualquier número de minutos:
-
-```
->>> sequence_time(4, 14, 18)
-'Total time to launch is 36 minutes' 
->>> sequence_time(4, 14, 48)
-'Total time to launch is 1.1 hours'
-```
-*Cuando se utilizan argumentos de variable, a cada valor ya no se le asigna un nombre de variable. Todos los valores ahora forman parte del nombre de variable catch-all que usa el asterisco (en estos ejemplos, args).*
-
-### Argumentos de palabra clave variable
-Para que una función acepte cualquier número de argumentos de palabra clave, debe usar una sintaxis similar. En este caso, se requiere un asterisco doble:
-
-```
-def variable_length(**kwargs):
-    print(kwargs)
+```python
+# sintaxis
+# Declarar la función
+def nombre_de_funcion(para1, para2):
+    codigo
+# Llamar la función
+print(nombre_de_funcion(para1 = 'John', para2 = 'Doe')) # aquí no importa el orden de los argumentos
 ```
 
-Prueba la función de ejemplo, que imprime los nombres y valores pasados como `kwargs`:
-```
->>> variable_length(tanks=1, day='Wednesday', pilots=3)
-{'tanks': 1, 'day': 'Wednesday', 'pilots': 3}
-```
+**Ejemplo:**
 
-Si ya conoces bien los diccionarios de Python, observarás que los argumentos de palabra clave de longitud variable se asignan como un diccionario. Para interactuar con las variables y los valores, usamos las mismas operaciones que un diccionario.
+```python
+def imprime_nombre_completo(nombre, apellido):
+    espacio = ' '
+    nombre_completo = nombre  + espacio + apellido
+    print(nombre_completo)
+print(imprime_nombre_completo(nombre = 'Alejandro', apellido = 'Morgan'))
 
-*Al igual que con los argumentos de variable, no es necesario usar kwargs cuando se usan argumentos de palabra clave variable. Puede usar cualquier nombre de variable válido. Aunque es habitual ver **kwargs o **kw, debe intentar usar la misma convención en un proyecto.*
-
-En esta función, vamos a usar argumentos de palabra clave variable para notificar los astronautas asignados a la misión. Dado que esta función permite cualquier número de argumentos de palabra clave, se puede reutilizar independientemente del número de astronautas asignados:
-
-```
-def crew_members(**kwargs):
-    print(f'{len(kwargs)} astronauts assigned for this mission:')
-    for title, name in kwargs.items():
-        print(f'{title}: {name}')
+def agregar_dos_numeros (numero1, numero2):
+    total = numero1 + numero2
+    print(total)
+print(agregar_dos_numeros(numero2 = 3, numero1 = 2)) # El orden no importa
 ```
 
-Probando con la tripulación del Apolo 11:
-```
->>> crew_members(captain='Neil Armstrong', pilot='Buzz Aldrin', command_pilot='Michael Collins')
-3 astronauts assigned for this mission:
-captain: Neil Armstrong
-pilot: Buzz Aldrin
-command_pilot: Michael Collins
+### Funciones que regresan un valor - Parte 2
+
+Si no devolvemos un valor con una función, entonces nuestra función devuelve _None_ por defecto. Para devolver un valor con una función usamos la palabra clave _return_ seguida de la variable que estamos devolviendo. Podemos devolver cualquier tipo de tipo de datos desde una función.
+
+- Devolviendo una cadena:
+**Ejemplo:**
+
+```python
+def print_nombre(nombre):
+    return nombre
+print_nombre('Alejandro') # Alejandro
+
+def imprimir_nombre_completo(nombre, apellido):
+    espacio = ' '
+    nombre_completo = nombre  + espacio + apellido
+    return nombre_completo
+imprimir_nombre_completo(nombre='Alejandro', apellido='Morgan')
 ```
 
-Dado que puede pasar cualquier combinación de argumentos de palabra clave, nos aseguramos de evitar palabras clave repetidas. Las palabras clave repetidas producirán un error:
+- Regresando un numero:
 
+**Ejemplo:**
+
+```python
+def agregar_dos_numeros (numero1, numero2):
+    total = numero1 + numero2
+    return total
+print(agregar_dos_numeros(2, 3))
+
+def calcular_edad (año_actual, año_nacimiento):
+    edad = año_actual - año_nacimiento
+    return edad
+print('edad: ', calcular_edad(2019, 1819))
 ```
->>> crew_members(captain='Neil Armstrong', pilot='Buzz Aldrin', pilot='Michael Collins')
-  File '<stdin>', line 1
-SyntaxError: keyword argument repeated: pilot
+
+- Regresando un buleano:
+  **Ejemplo:**
+
+```python
+def es_igual (n):
+    if n % 2 == 0:
+        print('igual')
+        return True    # return detiene la ejecución de la función, similar a break 
+    return False
+print(es_igual(10)) # True
+print(es_igual(7)) # False
+```
+
+- Regresando una lista:
+  **Ejemplo:**
+
+```python
+def encuentra_numeros_iguales(n):
+    iguales = []
+    for i in range(n + 1):
+        if i % 2 == 0:
+            iguales.append(i)
+    return iguales
+print(encuentra_numeros_iguales(10))
+```
+
+### Funciones con parametros por defecto
+
+A veces pasamos valores predeterminados a parámetros, cuando invocamos la función. Si no pasamos argumentos al llamar a la función, se utilizarán sus valores por defecto.
+
+```python
+# sintaxis
+# Declarar la función
+def nombre_de_funcion(parametro = valor):
+    codigo
+# Llamar la función
+nombre_de_funcion()
+nombre_de_funcion(arg)
+```
+
+**Ejemplo:**
+
+```python
+def saludo (nombre = 'Juan'):
+    mensaje = nombre + ', bienvenido a python!'
+    return mensaje
+print(saludo())
+print(saludo('Alejandro'))
+
+def generar_nombre_completo (nombre = 'Alejandro', apellido = 'Morgan'):
+    espacio = ' '
+    nombre_completo = nombre + espacio + apellido
+    return nombre_completo
+
+print(generar_nombre_completo())
+print(generar_nombre_completo('David','Martinez'))
+
+def calcular_edad (año_nacimiento,año_actual = 2021):
+    edad = año_actual - año_nacimiento
+    return edad
+print('edad: ', calcular_edad(1821))
+
+def peso_de_objeto (masa, gavedad = 9.81):
+    peso = str(masa * gavedad)+ ' N' # el valor tiene que ser cambiado a cadena primero
+    return peso
+print('peso de un objeto en newtons: ', peso_de_objeto(100)) # 9.81 - promedio de gavedad en la superficie de la Tierra
+print('peso de un objeto en newtons: ', peso_de_objeto(100, 1.62)) # gravedad en la superficie de la Luna
+```
+
+### Número arbitrario de argumentos
+
+Si no sabemos el número de argumentos que le pasamos a nuestra función, podemos crear una función que pueda tomar un número arbitrario de argumentos agregando \* antes del parámetro nombre.
+
+```python
+# sintaxis
+# Declarar la función
+def nombre_de_funcion(*args):
+    codigo
+# Llamar la función
+nombre_de_funcion(param1, param2, param3,..)
+```
+
+**Ejemplo:**
+
+```python
+def suma_todos_los_numeros(*numeros):
+    total = 0
+    for numero in numeros:
+        total += numero     # igual que total = total + num
+    return total
+print(suma_todos_los_numeros(2, 3, 5)) # 10
+```
+
+### Número predeterminado y arbitrario de parámetros en funciones
+
+```python
+def generar_grupos (equipo,*args):
+    print(equipo)
+    for i in args:
+        print(i)
+print(generar_grupos('Equipo-1','Alejandro','Brook','David','Eyob'))
+```
+
+### Función como parametro de otra función
+
+```python
+#Puedes pasar funciones como parametros
+def numero_al_cuadrado (n):
+    return n * n
+def hacer_algo(f, x):
+    return f(x)
+print(hacer_algo(numero_al_cuadrado, 3)) # 27
 ```
