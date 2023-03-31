@@ -86,12 +86,21 @@ class Perro(Animal):
         print("Guau!")
     def moverse(self):
         print("Caminando con 4 patas")
+    def otra(self):
+    	print("jalara?")
+
+mi_perro = Perro('mamífero', 10)
+mi_perro.otra()
 
 class Vaca(Animal):
     def hablar(self):
         print("Muuu!")
     def moverse(self):
         print("Caminando con 4 patas")
+
+mi_vaca = Vaca('mamífero', 10)
+mi_vaca.describeme()
+mi_vaca.hablar()
 
 class Abeja(Animal):
     def hablar(self):
@@ -102,6 +111,8 @@ class Abeja(Animal):
     # Nuevo método
     def picar(self):
         print("Picar!")
+
+
 
 ```
 
