@@ -6,15 +6,15 @@ Este curso pretende mostrar los aspectos básicos de la programación en python,
 
 Alumnos:
 
-* Alicia - [arosales73 - Python_Workshop_2023](https://github.com/arosales73/)
-* Paloma - [paloma-torres - Python_Workshop_2023](https://github.com/paloma-torres/)
-* Alberto - [BetoMarquezzz - Python_Workshop_2023](https://github.com/BetoMarquezzz/)
-* Rodrigo - [banolu - Python_Workshop_2023](https://github.com/banolu/)
-* Joel - [leoboyean - Python_Workshop_2023](https://github.com/leoboyean/)
-* Victor - [victor-bernal-serrano - Python_Workshop_2023](https://github.com/victor-bernal-serrano/)
-* Maria Inés - [MarinesRivas - Python_Workshop_2023](https://github.com/MarinesRivas/)
-* Ingrid - [IngridGaGo - Python_Workshop_2023](https://github.com/IngridGaGo/)
-* Gabriela - [xtrem19 - Python_Workshop_2023](https://github.com/xtrem19/)
+* Alicia - [arosales73 - Python_Workshop_2023](https://github.com/arosales73/Python_Homework)
+* Paloma - [paloma-torres - Python_Workshop_2023](https://github.com/paloma-torres/) - De baja
+* Alberto - [BetoMarquezzz - Python_Workshop_2023](https://github.com/BetoMarquezzz/Python_Homework)
+* Rodrigo - [banolu - Python_Workshop_2023](https://github.com/banolu/Python_Homework)
+* Joel - [leoboyean - Python_Workshop_2023](https://github.com/leoboyean/python_homework)
+* Victor - [victor-bernal-serrano - Python_Workshop_2023](https://github.com/victor-bernal-serrano/Python_Homework)
+* Maria Inés - [MarinesRivas - Python_Workshop_2023](https://github.com/MarinesRivas/Python_Homework)
+* Ingrid - [IngridGaGo - Python_Workshop_2023](https://github.com/IngridGaGo/Python_Homework)
+* Gabriela - [xtrem19 - Python_Workshop_2023](https://github.com/xtrem19/Python_Homework)
 
 Instructor:
 
