@@ -6,7 +6,7 @@ Este curso pretende mostrar los aspectos básicos de la programación en python,
 
 Alumnos:
 
-* Alicia - [arosales73 - Python_Workshop_2023](https://github.com/arosales73/Python_Homework)
+* Alicia - [arosales73 - Python_Workshop_2023](https://github.com/arosales73/Python_Homework) 
 * Paloma - [paloma-torres - Python_Workshop_2023](https://github.com/paloma-torres/) - De baja
 * Alberto - [BetoMarquezzz - Python_Workshop_2023](https://github.com/BetoMarquezzz/Python_Homework)
 * Rodrigo - [banolu - Python_Workshop_2023](https://github.com/banolu/Python_Homework)
@@ -15,6 +15,7 @@ Alumnos:
 * Maria Inés - [MarinesRivas - Python_Workshop_2023](https://github.com/MarinesRivas/Python_Homework)
 * Ingrid - [IngridGaGo - Python_Workshop_2023](https://github.com/IngridGaGo/Python_Homework)
 * Gabriela - [xtrem19 - Python_Workshop_2023](https://github.com/xtrem19/Python_Homework)
+* Levi - [Levi0324 - Python_Workshop_2023](https://github.com/Levi0324/Pyhton_homework)
 
 Instructor:
 
