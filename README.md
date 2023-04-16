@@ -20,3 +20,11 @@ Alumnos:
 Instructor:
 
 * Alejandro - [Unciafidelis - Python_Workshop_2023](https://github.com/unciafidelis/)
+
+## Tareas
+
+1.- Los prints con los tipos de datos y los resultados en comentario
+2.- Los ejercicios de expresiones regulares con los resultados en comentario
+3.- 5 Ejercicios de listas de los que les proporcione en un archivo
+4.- 5 ejercicios con ejemplos de Condicionales usando if elif e if anidados
+5.- 5 Ejercicios con ejemplos de funciones
