@@ -1,17 +1,17 @@
-## Selección de características
+# Selección de características
 
-### Introducción
+## Introducción
 
 En esta sección, exploraremos el concepto de selección de características, que es un paso importante en el desarrollo de modelos de machine learning. Cubriremos los diferentes tipos de técnicas de selección de características, sus ventajas y desventajas, y cómo implementarlas usando Python.
 
-### Módulo 1: ¿Qué es la selección de características?
+### ¿Qué es la selección de características?
 
 - Definición e importancia de la selección de características
 - Tipos de técnicas de selección de características
 - Selección de características supervisadas vs no supervisadas
 - Filtro vs Envoltorio vs Selección de características integradas
 
-#### Definición e importancia de la selección de características
+### Definición e importancia de la selección de características
 
 La selección de características es el proceso de seleccionar un subconjunto de características relevantes (variables, predictores) de un conjunto más grande de características para usar en un modelo de machine learning. El objetivo de la selección de características es reducir la complejidad del modelo, mejorar su rendimiento predictivo y evitar el sobreajuste.
 
@@ -19,22 +19,19 @@ La selección de características es importante en el machine learning porque el
 
 Además, la selección de características también puede ayudar a reducir el costo y el tiempo necesarios para la recopilación de datos, ya que nos permite concentrarnos en recopilar solo las características más relevantes. Esto es especialmente importante en situaciones en las que la recopilación de datos es costosa o lleva mucho tiempo, como en la investigación médica o el monitoreo ambiental.
 
-#### Tipos de técnicas de selección de características
+### Tipos de técnicas de selección de características
 
 Hay tres tipos principales de técnicas de selección de características:
 
-**Selección de características de filtro**:
-Los métodos de filtro evalúan cada característica de forma independiente en función de medidas estadísticas y seleccionan las más relevantes. Estos métodos son computacionalmente eficientes y pueden usarse como un paso de preprocesamiento. Los ejemplos de técnicas de selección de características de filtro incluyen la selección de características basada en la correlación, la selección de características de chi-cuadrado, la selección de características de información mutua, la selección de características de ANOVA y la selección de características de ganancia de información.
+1. Selección de características de filtro:
 
-**Selección de características de la envoltura**:
-Los métodos de contenedor seleccionan características en función del rendimiento del algoritmo de machine learning en diferentes subconjuntos de características. Estos métodos son costosos desde el punto de vista computacional y pueden dar lugar a un sobreajuste, pero tienden a ser más precisos que los métodos de filtrado. Los ejemplos de técnicas de selección de características de envoltorio incluyen la eliminación recursiva de características, la selección hacia adelante y la eliminación hacia atrás.
+2. Selección de características de la envoltura:
 
-**Selección de características integradas**:
-Los métodos integrados incorporan la selección de características como parte del proceso de entrenamiento del modelo. Estos métodos son computacionalmente eficientes y tienden a producir modelos más precisos que los métodos de filtro, pero pueden ser sensibles al sobreajuste. Los ejemplos de técnicas de selección de características integradas incluyen la regresión LASSO y la regresión de cresta.
+3. Selección de características integradas:
 
 La elección de la técnica de selección de características adecuada depende de las características del conjunto de datos, el algoritmo de machine learning que se utiliza y los objetivos específicos del análisis.
 
-#### Selección de características supervisadas vs no supervisadas
+### Selección de características supervisadas vs no supervisadas
 
 La selección de características supervisada y no supervisada son dos enfoques diferentes para seleccionar características en función de la presencia o ausencia de una variable objetivo.
 
@@ -44,27 +41,27 @@ Los métodos de selección de características no supervisados, por otro lado, n
 
 Tanto los métodos de selección de características supervisados ​​como los no supervisados ​​tienen sus ventajas y desventajas, y la elección del método depende de la naturaleza de los datos y los objetivos específicos del análisis.
 
-#### Filtro vs Envoltorio vs Selección de características integradas
+### Filtro vs Envoltorio vs Selección de características integradas
 
 La selección de características incrustadas, el contenedor y el filtro son tres tipos diferentes de técnicas de selección de características basadas en cómo incorporan la selección de características en el flujo de trabajo de machine learning.
 
-**Selección de características de filtro**:
+### Selección de características de filtro:
 Los métodos de selección de características de filtro son independientes del algoritmo de machine learning y seleccionan características en función de medidas estadísticas como correlación, información mutua o pruebas de chi-cuadrado. Estos métodos son computacionalmente eficientes y se pueden aplicar como un paso de preprocesamiento. Sin embargo, es posible que no seleccionen necesariamente las características más relevantes para el problema de machine learning dado. Los ejemplos de métodos de selección de características de filtro incluyen la selección de características basada en la correlación, la selección de características de chi-cuadrado y la selección de características de información mutua.
 
-**Selección de características de la envoltura**:
+### Selección de características de la envoltura:
 Los métodos de selección de características de contenedor seleccionan características en función del rendimiento del algoritmo de machine learning en diferentes subconjuntos de características. Estos métodos son costosos desde el punto de vista computacional y pueden dar lugar a un sobreajuste, pero tienden a ser más precisos que los métodos de filtrado. Los métodos de envoltorio pueden ser iterativos, seleccionando características una por una o en grupos, o recursivos, donde las características se eliminan paso a paso. Los ejemplos de métodos de selección de características de envoltorio incluyen la eliminación recursiva de características, la selección hacia adelante y la eliminación hacia atrás.
 
-**Selección de características integradas**:
+### Selección de características integradas:
 Los métodos de selección de características integrados incorporan la selección de características como parte del proceso de entrenamiento del modelo. Estos métodos son computacionalmente eficientes y tienden a producir modelos más precisos que los métodos de filtro, pero pueden ser sensibles al sobreajuste. Los ejemplos de técnicas de selección de características integradas incluyen la regresión LASSO, la regresión de crestas y métodos basados ​​en árboles de decisión, como bosque aleatorio y aumento de gradiente.
 
 La elección de la técnica de selección de características depende del conjunto de datos, el algoritmo de machine learning que se utiliza y los objetivos específicos del análisis. Los métodos de filtro son una buena opción cuando queremos una forma rápida y eficiente de reducir la dimensionalidad del conjunto de datos. Se prefieren los métodos de contenedor cuando queremos seleccionar un conjunto de características que optimizan el rendimiento de un algoritmo de machine learning específico. Los métodos integrados son útiles cuando queremos identificar las características más importantes para un problema de machine learning dado, mientras entrenamos el modelo.
 
 
-### Ejemplos en python de técnicas de selección de características de filtro
+## Ejemplos en python de técnicas de selección de características de filtro
 
 A continuación se proporcionan diversos ejemplos en la selección de características de filtro:
 
-**Selección de características basada en la correlación (Correlation-based feature selection)**
+### Selección de características basada en la correlación (Correlation-based feature selection)
 
 Correlación basada en selección de características es un método de filtro para la selección de características que evalúa la correlación entre cada característica y la variable objetivo, así como la correlación entre pares de características. Este método es útil cuando queremos identificar las características que están más fuertemente correlacionadas con la variable objetivo y aquellas que son redundantes entre sí.
 
@@ -125,7 +122,7 @@ Luego realizamos una selección de características basada en la correlación es
 
 Este es solo un ejemplo simple, y el umbral y el método de selección de características pueden variar según el conjunto de datos y el problema en cuestión.
 
-**Selección de características de chi-cuadrado (Chi-Squared Feature Selection)**
+### Selección de características de chi-cuadrado (Chi-Squared Feature Selection)
 
 La selección de características basada en chi-cuadrado es una técnica de selección de características que se utiliza para seleccionar las características más relevantes en un conjunto de características categóricas. La idea detrás de esta técnica es encontrar la relación entre cada característica y la variable objetivo mediante el cálculo de la chi-cuadrado entre ellas. Las características con los valores de chi-cuadrado más altos se consideran las más relevantes.
 
@@ -162,7 +159,7 @@ En este ejemplo, estamos utilizando el conjunto de datos Iris nuevamente. Primer
 
 Es importante tener en cuenta que la selección de características basada en chi-cuadrado solo funciona con características categóricas. Si el conjunto de datos contiene características numéricas, es necesario discretizarlas antes de aplicar esta técnica.
 
-**Selección de características de información mutua (Mutual Information Feature Selection)**
+### Selección de características de información mutua (Mutual Information Feature Selection)
 
 La selección de características basada en información mutua es una técnica de selección de características que se utiliza para seleccionar las características más relevantes en un conjunto de características. La idea detrás de esta técnica es encontrar la relación entre cada característica y la variable objetivo mediante el cálculo de la información mutua entre ellas. Las características con los valores de información mutua más altos se consideran las más relevantes.
 
@@ -198,7 +195,7 @@ En este ejemplo, estamos utilizando el conjunto de datos Iris nuevamente. Primer
 
 Es importante tener en cuenta que la selección de características basada en información mutua solo funciona con características numéricas. Si el conjunto de datos contiene características categóricas, es necesario convertirlas a numéricas antes de aplicar esta técnica.
 
-**Selección de características de ANOVA (ANOVA Feature Selection)**
+### Selección de características de ANOVA (ANOVA Feature Selection)
 
 La selección de características ANOVA es una técnica de selección de características que se utiliza para seleccionar las características más relevantes en un conjunto de características. La idea detrás de esta técnica es encontrar las características que están más relacionadas con la variable objetivo mediante el análisis de la varianza (ANOVA).
 
@@ -235,7 +232,7 @@ En este ejemplo, estamos utilizando el conjunto de datos Iris nuevamente. Primer
 
 Es importante tener en cuenta que la selección de características ANOVA solo funciona con características numéricas y asume que las muestras siguen una distribución normal. Si el conjunto de datos contiene características categóricas o no sigue una distribución normal, es necesario utilizar otra técnica de selección de características.
 
-**Selección de características de ganancia de información (Information Gain Feature Selection)**
+### Selección de características de ganancia de información (Information Gain Feature Selection)
 
 La selección de características de ganancia de información es una técnica de selección de características que se utiliza para seleccionar las características más informativas en un conjunto de características. La idea detrás de esta técnica es encontrar las características que tienen la mayor cantidad de información sobre la variable objetivo.
 
@@ -272,9 +269,9 @@ En este ejemplo, estamos utilizando el conjunto de datos Iris nuevamente. Primer
 
 Es importante tener en cuenta que la selección de características de ganancia de información solo funciona con características numéricas y puede ser sensible a la escala de las características. Si el conjunto de datos contiene características categóricas o no numéricas, es necesario utilizar otra técnica de selección de características.
 
-### Módulo 3: Técnicas de selección de características de contenedor
+## Técnicas de selección de características de contenedor
 
-**Eliminación de características recursivas (Recursive Feature Elimination)**
+### Eliminación de características recursivas (Recursive Feature Elimination)
 
 La eliminación recursiva de características (RFE) es una técnica de selección de características que se utiliza para seleccionar las características más importantes en un conjunto de características. La idea detrás de esta técnica es eliminar iterativamente las características menos importantes de un conjunto de características hasta que se alcanza el número deseado de características.
 
@@ -312,7 +309,7 @@ En este ejemplo, estamos utilizando el conjunto de datos Iris nuevamente. Primer
 
 Es importante tener en cuenta que la eliminación recursiva de características puede ser computacionalmente costosa para conjuntos de datos grandes y complejos. Además, el número de características a seleccionar debe ser determinado empíricamente y puede afectar la precisión del modelo resultante.
 
-**Selección hacia adelante (Forward Selection)**
+### Selección hacia adelante (Forward Selection)
 
 La selección hacia adelante (forward selection) es una técnica de selección de características que se utiliza para construir un modelo añadiendo iterativamente características a partir de un conjunto inicial de características. En cada iteración, se selecciona la característica que proporciona la mayor mejora en la precisión del modelo y se agrega al conjunto de características seleccionadas. Este proceso se repite hasta que se alcanza el número deseado de características o se detiene la mejora en la precisión del modelo.
 
@@ -364,7 +361,7 @@ En este ejemplo, estamos utilizando el conjunto de datos de precios de vivienda 
 
 Es importante tener en cuenta que la selección hacia adelante puede ser computacionalmente costosa para conjuntos de datos grandes y complejos. Además, la selección hacia adelante puede no ser la mejor opción si hay interacciones entre características o si las características seleccionadas son altamente correlacionadas.
 
-**Eliminación hacia atrás (Backward Elimination)**
+### Eliminación hacia atrás (Backward Elimination)
 
 La eliminación hacia atrás (backward elimination) es una técnica de selección de características que se utiliza para construir un modelo eliminando iterativamente características a partir de un conjunto inicial de características. En cada iteración, se elimina la característica que proporciona la menor mejora en la precisión del modelo y se elimina del conjunto de características seleccionadas. Este proceso se repite hasta que se alcanza el número deseado de características o se detiene la mejora en la precisión del modelo.
 
@@ -415,9 +412,9 @@ En este ejemplo, estamos utilizando el conjunto de datos de precios de vivienda 
 
 Es importante tener en cuenta que la eliminación hacia atrás puede ser computacionalmente costosa para conjuntos de datos grandes y complejos. Además, la eliminación hacia atrás puede no ser la mejor opción si hay interacciones entre características o si las características seleccionadas son altamente correlacionadas.
 
-### Módulo 4: Técnicas de selección de características integradas
+## Técnicas de selección de características integradas
 
-**Regresión LASSO (LASSO Regression)**
+### Regresión LASSO (LASSO Regression)
 
 La regresión LASSO (Least Absolute Shrinkage and Selection Operator) es una técnica de selección de características que utiliza regularización para reducir el número de características en un modelo y mejorar su capacidad de generalización. La regresión LASSO agrega una penalización a la función de pérdida que minimiza el error cuadrático medio, lo que reduce la magnitud de los coeficientes de las características menos importantes a cero. Esto significa que la regresión LASSO puede identificar y eliminar características irrelevantes del modelo.
 
@@ -454,7 +451,7 @@ En este ejemplo, estamos utilizando el conjunto de datos de precios de vivienda 
 
 Es importante tener en cuenta que el hiperparámetro alpha debe ajustarse cuidadosamente para obtener un buen equilibrio entre la precisión del modelo y la cantidad de características seleccionadas. Además, la regresión LASSO puede no ser la mejor opción si hay interacciones entre características o si las características seleccionadas son altamente correlacionadas.
 
-**Regresión de Ridge (Ridge Regression)**
+### Regresión de Ridge (Ridge Regression)
 
 La regresión de Ridge es otra técnica de selección de características que utiliza regularización para reducir la complejidad del modelo y mejorar su capacidad de generalización. Al igual que la regresión LASSO, la regresión de Ridge agrega una penalización a la función de pérdida que minimiza el error cuadrático medio. Sin embargo, en lugar de reducir los coeficientes de las características menos importantes a cero, la regresión de Ridge reduce la magnitud de los coeficientes, lo que significa que todas las características contribuyen al modelo.
 
@@ -491,6 +488,6 @@ En este ejemplo, estamos utilizando el mismo conjunto de datos de precios de viv
 
 Al igual que con la regresión LASSO, el hiperparámetro alpha debe ajustarse cuidadosamente para obtener un buen equilibrio entre la precisión del modelo y la cantidad de características seleccionadas. La regresión de Ridge también puede no ser la mejor opción si hay interacciones entre características o si las características seleccionadas son altamente correlacionadas.
 
-### Conclusión
+## Conclusión
 
 En este curso, hemos cubierto el concepto de selección de características, su importancia y varias técnicas que se pueden usar para seleccionar características para modelos de machine learning. Al final de este curso, comprenderá bien cómo implementar técnicas de selección de características en Python y qué técnica usar para diferentes tipos de conjuntos de datos.
