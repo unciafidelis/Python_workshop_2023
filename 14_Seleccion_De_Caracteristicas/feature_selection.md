@@ -9,7 +9,7 @@ En esta sección, exploraremos el concepto de selección de características, qu
 - Definición e importancia de la selección de características
 - Tipos de técnicas de selección de características
 - Selección de características supervisadas vs no supervisadas
-- Filtro vs Envoltorio vs Selección de características integradas
+- Filtro vs Envoltorio vs Selección de características embedidas (Embedded Feature Selection Techniques)
 
 ### Definición e importancia de la selección de características
 
@@ -23,11 +23,11 @@ Además, la selección de características también puede ayudar a reducir el co
 
 Hay tres tipos principales de técnicas de selección de características:
 
-1. Selección de características de filtro:
+1. Selección de características de filtro (Filter Feature Selection Techniques)
 
-2. Selección de características de la envoltura:
+2. Selección de características de la envoltura
 
-3. Selección de características integradas:
+3. Selección de características embedidas (Embedded Feature Selection Techniques)
 
 La elección de la técnica de selección de características adecuada depende de las características del conjunto de datos, el algoritmo de machine learning que se utiliza y los objetivos específicos del análisis.
 
@@ -41,23 +41,13 @@ Los métodos de selección de características no supervisados, por otro lado, n
 
 Tanto los métodos de selección de características supervisados ​​como los no supervisados ​​tienen sus ventajas y desventajas, y la elección del método depende de la naturaleza de los datos y los objetivos específicos del análisis.
 
-### Filtro vs Envoltorio vs Selección de características integradas
+### Técnicas Filter vs Wrapper vs Embedded en la selección de características
 
 La selección de características incrustadas, el contenedor y el filtro son tres tipos diferentes de técnicas de selección de características basadas en cómo incorporan la selección de características en el flujo de trabajo de machine learning.
 
-### Selección de características de filtro:
+## Ejemplos en python de técnicas de selección de características de filtro (Filter Feature Selection Techniques)
+
 Los métodos de selección de características de filtro son independientes del algoritmo de machine learning y seleccionan características en función de medidas estadísticas como correlación, información mutua o pruebas de chi-cuadrado. Estos métodos son computacionalmente eficientes y se pueden aplicar como un paso de preprocesamiento. Sin embargo, es posible que no seleccionen necesariamente las características más relevantes para el problema de machine learning dado. Los ejemplos de métodos de selección de características de filtro incluyen la selección de características basada en la correlación, la selección de características de chi-cuadrado y la selección de características de información mutua.
-
-### Selección de características de la envoltura:
-Los métodos de selección de características de contenedor seleccionan características en función del rendimiento del algoritmo de machine learning en diferentes subconjuntos de características. Estos métodos son costosos desde el punto de vista computacional y pueden dar lugar a un sobreajuste, pero tienden a ser más precisos que los métodos de filtrado. Los métodos de envoltorio pueden ser iterativos, seleccionando características una por una o en grupos, o recursivos, donde las características se eliminan paso a paso. Los ejemplos de métodos de selección de características de envoltorio incluyen la eliminación recursiva de características, la selección hacia adelante y la eliminación hacia atrás.
-
-### Selección de características integradas:
-Los métodos de selección de características integrados incorporan la selección de características como parte del proceso de entrenamiento del modelo. Estos métodos son computacionalmente eficientes y tienden a producir modelos más precisos que los métodos de filtro, pero pueden ser sensibles al sobreajuste. Los ejemplos de técnicas de selección de características integradas incluyen la regresión LASSO, la regresión de crestas y métodos basados ​​en árboles de decisión, como bosque aleatorio y aumento de gradiente.
-
-La elección de la técnica de selección de características depende del conjunto de datos, el algoritmo de machine learning que se utiliza y los objetivos específicos del análisis. Los métodos de filtro son una buena opción cuando queremos una forma rápida y eficiente de reducir la dimensionalidad del conjunto de datos. Se prefieren los métodos de contenedor cuando queremos seleccionar un conjunto de características que optimizan el rendimiento de un algoritmo de machine learning específico. Los métodos integrados son útiles cuando queremos identificar las características más importantes para un problema de machine learning dado, mientras entrenamos el modelo.
-
-
-## Ejemplos en python de técnicas de selección de características de filtro
 
 A continuación se proporcionan diversos ejemplos en la selección de características de filtro:
 
@@ -269,7 +259,9 @@ En este ejemplo, estamos utilizando el conjunto de datos Iris nuevamente. Primer
 
 Es importante tener en cuenta que la selección de características de ganancia de información solo funciona con características numéricas y puede ser sensible a la escala de las características. Si el conjunto de datos contiene características categóricas o no numéricas, es necesario utilizar otra técnica de selección de características.
 
-## Técnicas de selección de características de contenedor
+## Técnicas de selección de características de contenedor (Wrapper Feature Selection Techniques)
+
+Los métodos de selección de características de contenedor seleccionan características en función del rendimiento del algoritmo de machine learning en diferentes subconjuntos de características. Estos métodos son costosos desde el punto de vista computacional y pueden dar lugar a un sobreajuste, pero tienden a ser más precisos que los métodos de filtrado. Los métodos de envoltorio pueden ser iterativos, seleccionando características una por una o en grupos, o recursivos, donde las características se eliminan paso a paso. Los ejemplos de métodos de selección de características de envoltorio incluyen la eliminación recursiva de características, la selección hacia adelante y la eliminación hacia atrás.
 
 ### Eliminación de características recursivas (Recursive Feature Elimination)
 
@@ -412,7 +404,11 @@ En este ejemplo, estamos utilizando el conjunto de datos de precios de vivienda 
 
 Es importante tener en cuenta que la eliminación hacia atrás puede ser computacionalmente costosa para conjuntos de datos grandes y complejos. Además, la eliminación hacia atrás puede no ser la mejor opción si hay interacciones entre características o si las características seleccionadas son altamente correlacionadas.
 
-## Técnicas de selección de características integradas
+## Técnicas de selección de características embedidas (Embedded Feature Selection Techniques)
+
+Los métodos de selección de características embedidos incorporan la selección de características como parte del proceso de entrenamiento del modelo. Estos métodos son computacionalmente eficientes y tienden a producir modelos más precisos que los métodos de filtro, pero pueden ser sensibles al sobreajuste. Los ejemplos de técnicas de selección de características embedidas (Embedded Feature Selection Techniques) incluyen la regresión LASSO, la regresión de crestas y métodos basados ​​en árboles de decisión, como bosque aleatorio y aumento de gradiente.
+
+La elección de la técnica de selección de características depende del conjunto de datos, el algoritmo de machine learning que se utiliza y los objetivos específicos del análisis. Los métodos de filtro son una buena opción cuando queremos una forma rápida y eficiente de reducir la dimensionalidad del conjunto de datos. Se prefieren los métodos de contenedor cuando queremos seleccionar un conjunto de características que optimizan el rendimiento de un algoritmo de machine learning específico. Los métodos embedidos son útiles cuando queremos identificar las características más importantes para un problema de machine learning dado, mientras entrenamos el modelo.
 
 ### Regresión LASSO (LASSO Regression)
 
