@@ -1,7 +1,7 @@
 # Modelos de machine learning de agrupamiento
 
 ## Introducción
-En esta sección, xploraremos los conceptos de agrupamiento y clustering en el contexto del machine learning. Aprenderemos sobre los diferentes tipos de algoritmos de clustering y sus aplicaciones en una variedad de campos, desde la segmentación de clientes hasta el análisis de datos espaciales.
+En esta sección, exploraremos los conceptos de agrupamiento y clustering en el contexto del machine learning. Aprenderemos sobre los diferentes tipos de algoritmos de clustering y sus aplicaciones en una variedad de campos, desde la segmentación de clientes hasta el análisis de datos espaciales.
 
 Los objetivos de aprendizaje de este módulo incluyen:
 
@@ -9,7 +9,7 @@ Los objetivos de aprendizaje de este módulo incluyen:
 - Familiarizarse con los diferentes tipos de algoritmos de clustering y sus fortalezas y debilidades.
 - Saber cómo evaluar la calidad de los clusters y cómo preprocesar los datos antes del clustering.
 - Aprender cómo implementar técnicas de clustering en Python utilizando bibliotecas populares como Scikit-learn y Scipy.
-- Explorar las aplicaciones del aprendizaje no supervisado, como la detección de anomalías y la reducción de dimensionalidad.
+- Eer las aplicaciones del aprendizaje no supervisado, como la detección de anomalías y la reducción de dimensionalidad.
 
 ## Agrupamiento vs Clustering 
 
