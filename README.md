@@ -15,7 +15,7 @@ Alumnos:
 * Maria Inés - [MarinesRivas - Python_Workshop_2023](https://github.com/MarinesRivas/Python_Homework)
 * Ingrid - [IngridGaGo - Python_Workshop_2023](https://github.com/IngridGaGo/Python_Homework)
 * Gabriela - [xtrem19 - Python_Workshop_2023](https://github.com/xtrem19/Python_Homework)
-* Levi - [Levi0324 - Python_Workshop_2023](https://github.com/Levi0324/Pyhton_homework)
+* Levi - [Levi0324 - Python_Workshop_2023](https://github.com/Levi0324/Pyhton_homework) - De baja
 
 Instructor:
 
