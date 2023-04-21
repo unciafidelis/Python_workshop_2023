@@ -32,3 +32,5 @@ Instructor:
 4.- 5 ejercicios con ejemplos de Condicionales usando if elif e if anidados
 
 5.- 5 Ejercicios con ejemplos de funciones
+
+6.- Implementar 3 técnicas e selección de características y mostrar los resultados en comentario, así como tambien si existe o no similitud entre características.
